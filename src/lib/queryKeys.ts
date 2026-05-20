@@ -55,6 +55,14 @@ export const qk = {
     myStatus: (lang: Language, userId: string | undefined) => ["checkpoint-status", lang, userId] as const,
   },
 
+  // ── Knowledge checks (per-week MCQ + code) ───────────────────────────────
+  knowledgeCheck: {
+    byWeek:   (lang: Language, phase: number | undefined, week: number | undefined) =>
+                ["knowledge-check", lang, phase, week] as const,
+    myStatus: (lang: Language, userId: string | undefined) =>
+                ["knowledge-check-status", lang, userId] as const,
+  },
+
   // ── Analytics ────────────────────────────────────────────────────────────
   analytics: {
     byLang: (lang: Language, userId: string | undefined) => ["analytics", lang, userId] as const,

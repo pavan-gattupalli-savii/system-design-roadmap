@@ -24,6 +24,7 @@ import conceptsRouter    from "./routes/concepts.js";
 import notesRouter       from "./routes/notes.js";
 import checkpointsRouter from "./routes/checkpoints.js";
 import analyticsRouter   from "./routes/analytics.js";
+import knowledgeCheckRouter, { warmKnowledgeChecks } from "./routes/knowledgeCheck.js";
 
 
 const app = express();
@@ -96,6 +97,7 @@ app.use("/api/concepts",    readLimiter, conceptsRouter);
 app.use("/api/me/notes",    notesRouter);       // auth required inside router
 app.use("/api/me/analytics", analyticsRouter);  // auth required inside router
 app.use("/api/checkpoints", readLimiter, checkpointsRouter);
+app.use("/api/knowledge-checks", readLimiter, knowledgeCheckRouter);
 
 // ── 404 ───────────────────────────────────────────────────────────────────────
 app.use((_req, res) => {
@@ -131,6 +133,7 @@ async function warmup(): Promise<void> {
     await Promise.all([
       buildRoadmap("python"),
       buildRoadmap("java"),
+      warmKnowledgeChecks(),
 
       cached("readings::::top:1:200", async () => {
         const rows = await db

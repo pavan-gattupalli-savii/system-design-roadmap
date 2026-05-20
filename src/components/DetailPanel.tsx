@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { Suspense, lazy, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { TYPES } from "../data/types";
 import { resId, sessionColors } from "../utils/stats";
@@ -9,6 +9,16 @@ import { useBuilds } from "../hooks/useBuilds";
 import { useAuth } from "../lib/auth";
 import { useWeekConcepts } from "../hooks/useWeekConcepts";
 import { useNotes } from "../hooks/useNotes";
+import { useMyKnowledgeCheckStatus } from "../hooks/useKnowledgeCheck";
+
+// Lazy-loaded — KnowledgeCheckTab pulls in its own dependencies (and, in
+// Phase 2, CodeMirror + Pyodide). Keeping it off the main chunk preserves the
+// initial bundle size and only pays the cost when the user opens the tab.
+const KnowledgeCheckTab = lazy(() => import("./KnowledgeCheckTab"));
+function prefetchKnowledgeCheckTab() {
+  // Triggered on hover. Browsers dedupe duplicate import() calls.
+  import("./KnowledgeCheckTab").catch(() => {});
+}
 
 interface Props {
   weekObj:       WeekWithPhase | undefined;
@@ -34,6 +44,12 @@ export function DetailPanel({
   const { submissions: buildSubmissions, submit: submitBuild, remove: deleteBuild } = useBuilds(language);
   const { concepts: weekConcepts } = useWeekConcepts(language, weekObj?.phase, weekObj?.n);
   const { notes: userNotes, save: saveNote, remove: deleteNote } = useNotes(language);
+  const { status: kcStatus } = useMyKnowledgeCheckStatus(language);
+
+  const [tab, setTab] = useState<"sessions" | "knowledgeCheck">("sessions");
+  // Reset to sessions whenever the active week/language changes — KC tab
+  // state shouldn't bleed across weeks.
+  useEffect(() => { setTab("sessions"); }, [weekObj?.n, weekObj?.phase, language]);
 
   // MUST be called unconditionally (Rules of Hooks) — guard inside the memo body
   const weekProgress = useMemo(() => {
@@ -188,12 +204,13 @@ export function DetailPanel({
             const hasProg = prog.done > 0 && !isDone;
             const isActive = weekObj.n === w.n;
             const dotColor = isDone ? successColor : hasProg ? phaseAccent : "var(--border)";
+            const kcPassed = kcStatus[`${weekObj.phase}.${w.n}`]?.passed === true;
 
             return (
               <button
                 key={w.n}
                 onClick={() => selectWeek(w.n)}
-                title={`Week ${w.n}: ${w.title}`}
+                title={`Week ${w.n}: ${w.title}${kcPassed ? " · 🧪 passed" : ""}`}
                 style={{
                   display:        "flex",
                   flexDirection:  "column",
@@ -213,8 +230,11 @@ export function DetailPanel({
                   transition:     "all 0.12s",
                 }}
               >
-                <span style={{ lineHeight: 1 }}>
+                <span style={{ lineHeight: 1, display: "inline-flex", alignItems: "center", gap: 3 }}>
                   {isDone && !isActive ? "✓" : w.n}
+                  {kcPassed && (
+                    <span style={{ fontSize: 9, lineHeight: 1, opacity: isActive ? 0.85 : 1 }} title="Knowledge check passed">🧪</span>
+                  )}
                 </span>
                 {/* Tiny progress dot */}
                 <div
@@ -327,8 +347,59 @@ export function DetailPanel({
           </div>
         )}
 
-        {/* Session accordions */}
-        {weekObj.sessions.map((session, si) => {
+        {/* ── Tab strip: Sessions vs Knowledge Check ─────────────────── */}
+        <div style={{
+          display: "flex", gap: 4, borderBottom: "1px solid var(--border-subtle)",
+          marginBottom: 14,
+        }}>
+          {(["sessions", "knowledgeCheck"] as const).map((id) => {
+            const active = tab === id;
+            const label  = id === "sessions" ? "📚 Learn" : "🧪 Knowledge check";
+            return (
+              <button
+                key={id}
+                onClick={() => setTab(id)}
+                onMouseEnter={id === "knowledgeCheck" ? prefetchKnowledgeCheckTab : undefined}
+                onFocus={id === "knowledgeCheck" ? prefetchKnowledgeCheckTab : undefined}
+                style={{
+                  background:    "transparent",
+                  border:        "none",
+                  borderBottom:  "2px solid " + (active ? phaseAccent : "transparent"),
+                  color:         active ? phaseAccent : "var(--text-secondary)",
+                  padding:       "8px 14px",
+                  fontSize:      12,
+                  fontWeight:    active ? 700 : 500,
+                  cursor:        "pointer",
+                  fontFamily:    "inherit",
+                  marginBottom:  -1,
+                  transition:    "all 0.12s",
+                }}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* ── Knowledge Check tab body ─────────────────────────────────── */}
+        {tab === "knowledgeCheck" && (
+          <Suspense fallback={
+            <div style={{ padding: 24, color: "var(--text-muted)", fontSize: 13, textAlign: "center" }}>
+              Loading knowledge check…
+            </div>
+          }>
+            <KnowledgeCheckTab
+              language={language}
+              phase={weekObj.phase}
+              week={weekObj.n}
+              accent={phaseAccent}
+              isMobile={isMobile}
+            />
+          </Suspense>
+        )}
+
+        {/* ── Sessions tab body ────────────────────────────────────────── */}
+        {tab === "sessions" && weekObj.sessions.map((session, si) => {
           const isOpen      = openSessions[si] !== false;
           const lc          = sessionColors(session.label);
           const smins       = session.resources.reduce((a, r) => a + r.mins, 0);
@@ -380,7 +451,7 @@ export function DetailPanel({
         })}
 
         {/* Phase outcomes — surfaced on the last week of the phase as a recap */}
-        {phase.outcomes && phase.outcomes.length > 0 && weekIndex === phase.weeks.length - 1 && (
+        {tab === "sessions" && phase.outcomes && phase.outcomes.length > 0 && weekIndex === phase.weeks.length - 1 && (
           <div style={{
             marginTop: 18, padding: "14px 16px", borderRadius: 10,
             background: phaseAccent + "0d", border: "1px solid " + phaseAccent + "33",
@@ -397,7 +468,7 @@ export function DetailPanel({
         )}
 
         {/* Checkpoint CTA — shown on last week of phase */}
-        {weekIndex === phase.weeks.length - 1 && (
+        {tab === "sessions" && weekIndex === phase.weeks.length - 1 && (
           <Link
             to={`/app/roadmap/phase/${phase.phase}/checkpoint?lang=${language}`}
             style={{
@@ -414,10 +485,12 @@ export function DetailPanel({
         )}
 
         {/* Motivational tip */}
-        <div style={{ marginTop: 16, background: "var(--bg-panel)", border: "1px solid var(--border)", borderRadius: 8, padding: "12px 16px", fontSize: 11, color: "var(--text-muted)", lineHeight: 1.6 }}>
-          <span style={{ color: "#fbbf24" }}>💡 </span>
-          Build every week — even a small project cements concepts far better than passive reading. Check off resources as you complete them!
-        </div>
+        {tab === "sessions" && (
+          <div style={{ marginTop: 16, background: "var(--bg-panel)", border: "1px solid var(--border)", borderRadius: 8, padding: "12px 16px", fontSize: 11, color: "var(--text-muted)", lineHeight: 1.6 }}>
+            <span style={{ color: "#fbbf24" }}>💡 </span>
+            Build every week — even a small project cements concepts far better than passive reading. Check off resources as you complete them!
+          </div>
+        )}
       </div>
     </div>
   );

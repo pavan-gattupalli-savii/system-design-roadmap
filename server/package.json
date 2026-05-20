@@ -14,6 +14,7 @@
     "migrate": "tsx scripts/migrate.ts",
     "seed": "tsx scripts/seed.ts",
     "seed:roadmap": "tsx scripts/seed-roadmap.ts",
+    "seed:knowledge-checks": "tsx scripts/seed-knowledge-checks.ts",
     "promote-admin": "tsx scripts/promote-admin.ts",
     "db:studio": "drizzle-kit studio",
     "db:push": "drizzle-kit push"

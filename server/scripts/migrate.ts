@@ -376,6 +376,109 @@ async function migrate() {
   `;
   console.log("  ✓ phase_checkpoints + user_checkpoint_attempts");
 
+  // ── D1: per-week knowledge checks (MCQ/MAQ + code problems) ───────────────
+  await sql`
+    CREATE TABLE IF NOT EXISTS week_checks (
+      id            SERIAL PRIMARY KEY,
+      language      TEXT NOT NULL CHECK (language IN ('python','java')),
+      phase_number  INT  NOT NULL,
+      week_number   INT  NOT NULL,
+      title         TEXT NOT NULL DEFAULT 'Knowledge check',
+      pass_pct      INT  NOT NULL DEFAULT 70 CHECK (pass_pct BETWEEN 0 AND 100),
+      created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+      UNIQUE (language, phase_number, week_number)
+    )
+  `;
+  await sql`
+    CREATE TABLE IF NOT EXISTS week_check_mcq (
+      id              SERIAL PRIMARY KEY,
+      week_check_id   INT  NOT NULL REFERENCES week_checks(id) ON DELETE CASCADE,
+      prompt          TEXT NOT NULL,
+      options         JSONB NOT NULL,
+      correct         JSONB NOT NULL,
+      explanation     TEXT NOT NULL DEFAULT '',
+      points          INT  NOT NULL DEFAULT 1,
+      sort_order      INT  NOT NULL DEFAULT 0
+    )
+  `;
+  await sql`
+    CREATE TABLE IF NOT EXISTS week_check_code_problems (
+      id              SERIAL PRIMARY KEY,
+      week_check_id   INT  NOT NULL REFERENCES week_checks(id) ON DELETE CASCADE,
+      runtime         TEXT NOT NULL CHECK (runtime IN ('python','java')),
+      title           TEXT NOT NULL,
+      prompt          TEXT NOT NULL,
+      starter         TEXT NOT NULL DEFAULT '',
+      entry_fn        TEXT,
+      timeout_ms      INT  NOT NULL DEFAULT 3000,
+      points          INT  NOT NULL DEFAULT 3,
+      sort_order      INT  NOT NULL DEFAULT 0
+    )
+  `;
+  await sql`
+    CREATE TABLE IF NOT EXISTS week_check_code_tests (
+      id           SERIAL PRIMARY KEY,
+      problem_id   INT  NOT NULL REFERENCES week_check_code_problems(id) ON DELETE CASCADE,
+      name         TEXT NOT NULL DEFAULT '',
+      input        JSONB NOT NULL,
+      expected     JSONB NOT NULL,
+      hidden       BOOLEAN NOT NULL DEFAULT false,
+      weight       INT  NOT NULL DEFAULT 1,
+      sort_order   INT  NOT NULL DEFAULT 0
+    )
+  `;
+  await sql`
+    CREATE TABLE IF NOT EXISTS user_week_check_attempts (
+      user_id        UUID NOT NULL REFERENCES users(id)       ON DELETE CASCADE,
+      week_check_id  INT  NOT NULL REFERENCES week_checks(id) ON DELETE CASCADE,
+      score_pct      INT  NOT NULL CHECK (score_pct BETWEEN 0 AND 100),
+      passed         BOOLEAN NOT NULL,
+      attempted_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+      PRIMARY KEY (user_id, week_check_id)
+    )
+  `;
+  await sql`
+    CREATE TABLE IF NOT EXISTS user_week_check_answers (
+      user_id        UUID NOT NULL REFERENCES users(id)       ON DELETE CASCADE,
+      week_check_id  INT  NOT NULL REFERENCES week_checks(id) ON DELETE CASCADE,
+      item_type      TEXT NOT NULL CHECK (item_type IN ('mcq','code')),
+      item_id        INT  NOT NULL,
+      correct        BOOLEAN NOT NULL,
+      payload        JSONB NOT NULL,
+      attempted_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+      PRIMARY KEY (user_id, week_check_id, item_type, item_id)
+    )
+  `;
+  await sql`
+    CREATE TABLE IF NOT EXISTS week_check_numeric (
+      id              SERIAL PRIMARY KEY,
+      week_check_id   INT  NOT NULL REFERENCES week_checks(id) ON DELETE CASCADE,
+      prompt          TEXT NOT NULL,
+      expected        TEXT NOT NULL,
+      tolerance_pct   INT  NOT NULL DEFAULT 10 CHECK (tolerance_pct BETWEEN 0 AND 100),
+      unit            TEXT NOT NULL DEFAULT '',
+      explanation     TEXT NOT NULL DEFAULT '',
+      points          INT  NOT NULL DEFAULT 2,
+      sort_order      INT  NOT NULL DEFAULT 0
+    )
+  `;
+  await sql`CREATE INDEX IF NOT EXISTS idx_wc_numeric_check ON week_check_numeric(week_check_id, sort_order)`;
+  // Existing item_type CHECK only allows 'mcq' | 'code'. Loosen so numeric
+  // answers can be stored alongside. Done idempotently — drop + re-add.
+  await sql`ALTER TABLE user_week_check_answers DROP CONSTRAINT IF EXISTS user_week_check_answers_item_type_check`;
+  await sql`ALTER TABLE user_week_check_answers ADD CONSTRAINT user_week_check_answers_item_type_check CHECK (item_type IN ('mcq','code','numeric'))`;
+  // Critical for the GET endpoint: lookup by (language, phase, week) hits this.
+  await sql`CREATE INDEX IF NOT EXISTS idx_week_checks_lpw ON week_checks(language, phase_number, week_number)`;
+  // Child lookups order by sort_order — a covering index keeps the route's
+  // two fan-out queries (mcq + code problems) off seq scans.
+  await sql`CREATE INDEX IF NOT EXISTS idx_wc_mcq_check          ON week_check_mcq(week_check_id, sort_order)`;
+  await sql`CREATE INDEX IF NOT EXISTS idx_wc_code_check         ON week_check_code_problems(week_check_id, sort_order)`;
+  await sql`CREATE INDEX IF NOT EXISTS idx_wc_code_tests_problem ON week_check_code_tests(problem_id, sort_order)`;
+  // Status query: "what has user X passed for language L?" — filter by user, join checks.
+  await sql`CREATE INDEX IF NOT EXISTS idx_uwc_attempts_user     ON user_week_check_attempts(user_id)`;
+  console.log("  ✓ week_checks + week_check_mcq + week_check_code_problems + week_check_code_tests");
+  console.log("  ✓ user_week_check_attempts + user_week_check_answers");
+
   console.log("✅ Migration complete");
 }
 

@@ -198,6 +198,112 @@ export const userCheckpointAttempts = pgTable(
   (t) => [primaryKey({ columns: [t.userId, t.checkpointId] })],
 );
 
+// ── Per-week knowledge check (MCQ/MAQ + code problems) ───────────────────────
+// One row per (language, phaseNumber, weekNumber). Children: weekCheckMcq +
+// weekCheckCodeProblems → weekCheckCodeTests. Unique index lets us upsert by
+// the natural key during seed without storing the FK back into roadmap_weeks.
+export const weekChecks = pgTable(
+  "week_checks",
+  {
+    id:          serial("id").primaryKey(),
+    language:    text("language").notNull(),
+    phaseNumber: integer("phase_number").notNull(),
+    weekNumber:  integer("week_number").notNull(),
+    title:       text("title").notNull().default("Knowledge check"),
+    passPct:     integer("pass_pct").notNull().default(70),
+    createdAt:   timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [uniqueIndex("week_checks_lang_phase_week_uq").on(t.language, t.phaseNumber, t.weekNumber)],
+);
+
+// MCQ + MAQ in one table — `correct` is a jsonb int[] of valid option indices.
+// Length 1 → single-select; length > 1 → multi-select. UI infers type.
+export const weekCheckMcq = pgTable("week_check_mcq", {
+  id:          serial("id").primaryKey(),
+  weekCheckId: integer("week_check_id").notNull(),
+  prompt:      text("prompt").notNull(),
+  options:     jsonb("options").notNull(),     // string[]
+  correct:     jsonb("correct").notNull(),     // number[]
+  explanation: text("explanation").notNull().default(""),
+  points:      integer("points").notNull().default(1),
+  sortOrder:   integer("sort_order").notNull().default(0),
+});
+
+// Code problems — `runtime` selects executor (Python = Pyodide, Java = Piston
+// in later phase). `entryFn` is the function/method the harness invokes per
+// test. `starter` is shown in the editor; never used for grading.
+export const weekCheckCodeProblems = pgTable("week_check_code_problems", {
+  id:           serial("id").primaryKey(),
+  weekCheckId:  integer("week_check_id").notNull(),
+  runtime:      text("runtime").notNull(),     // 'python' | 'java'
+  title:        text("title").notNull(),
+  prompt:       text("prompt").notNull(),
+  starter:      text("starter").notNull().default(""),
+  entryFn:      text("entry_fn"),
+  timeoutMs:    integer("timeout_ms").notNull().default(3000),
+  points:       integer("points").notNull().default(3),
+  sortOrder:    integer("sort_order").notNull().default(0),
+});
+
+// Per-test case. `hidden` cases never have their input/expected leaked to the
+// browser through the public GET — only their existence and pass/fail.
+export const weekCheckCodeTests = pgTable("week_check_code_tests", {
+  id:         serial("id").primaryKey(),
+  problemId:  integer("problem_id").notNull(),
+  name:       text("name").notNull().default(""),
+  input:      jsonb("input").notNull(),
+  expected:   jsonb("expected").notNull(),
+  hidden:     boolean("hidden").notNull().default(false),
+  weight:     integer("weight").notNull().default(1),
+  sortOrder:  integer("sort_order").notNull().default(0),
+});
+
+// Numeric / range-match estimation question. Grader accepts answers within
+// `tolerancePct` of `expected` (deterministic, no LLM). Use for back-of-
+// envelope sizing — storage, latency budgets, QPS targets. `unit` is a
+// display hint only ("GB", "ms", "QPS") and never participates in grading.
+export const weekCheckNumeric = pgTable("week_check_numeric", {
+  id:           serial("id").primaryKey(),
+  weekCheckId:  integer("week_check_id").notNull(),
+  prompt:       text("prompt").notNull(),
+  expected:     text("expected").notNull(),     // text to preserve large numbers / scientific notation
+  tolerancePct: integer("tolerance_pct").notNull().default(10),
+  unit:         text("unit").notNull().default(""),
+  explanation:  text("explanation").notNull().default(""),
+  points:       integer("points").notNull().default(2),
+  sortOrder:    integer("sort_order").notNull().default(0),
+});
+
+// Aggregate attempt row — one per (user, weekCheck). Upserted on every
+// submit; best-score-wins handled at the route level.
+export const userWeekCheckAttempts = pgTable(
+  "user_week_check_attempts",
+  {
+    userId:       uuid("user_id").notNull(),
+    weekCheckId:  integer("week_check_id").notNull(),
+    scorePct:     integer("score_pct").notNull(),
+    passed:       boolean("passed").notNull(),
+    attemptedAt:  timestamp("attempted_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.weekCheckId] })],
+);
+
+// Per-item evidence — `itemType` is 'mcq' | 'code'. Lets us show "wrong last
+// time, right this time" hints and audit code submissions later if needed.
+export const userWeekCheckAnswers = pgTable(
+  "user_week_check_answers",
+  {
+    userId:       uuid("user_id").notNull(),
+    weekCheckId:  integer("week_check_id").notNull(),
+    itemType:     text("item_type").notNull(),
+    itemId:       integer("item_id").notNull(),
+    correct:      boolean("correct").notNull(),
+    payload:      jsonb("payload").notNull(),
+    attemptedAt:  timestamp("attempted_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.weekCheckId, t.itemType, t.itemId] })],
+);
+
 // ── Users ─────────────────────────────────────────────────────────────────────
 export const users = pgTable("users", {
   id:               uuid("id").primaryKey().defaultRandom(),

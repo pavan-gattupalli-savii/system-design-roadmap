@@ -1,0 +1,1 @@
+import{j as r}from"./react-BatKE75m.js";import{M as a}from"./markdown-DAOmdGvj.js";function i({body:e}){return r.jsx("div",{className:"md-view",children:r.jsx(a,{components:{a:({href:n,children:o})=>r.jsx("a",{href:n,target:"_blank",rel:"noopener noreferrer",children:o})},children:e})})}export{i as M};

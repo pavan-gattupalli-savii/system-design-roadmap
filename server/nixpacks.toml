@@ -7,7 +7,11 @@
 cmds = ["npm ci"]           # installs ALL deps (devDeps included), ignores NODE_ENV
 
 [phases.build]
-cmds = ["npm run build"]    # runs `tsc` — now available because typescript is in devDeps
+# `tsc` compiles the API. `npm run migrate` runs the idempotent schema
+# migration against DATABASE_URL — kept in the build phase so `tsx`
+# (a devDep) is still resolvable. Migration is safe to re-run on every
+# deploy (CREATE TABLE IF NOT EXISTS).
+cmds = ["npm run build", "npm run migrate"]
 
 # NOTE: do NOT add [phases.start] — Nixpacks treats it as a Docker RUN during
 # the image build, not the container start command.

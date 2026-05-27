@@ -1,0 +1,40 @@
+# Render Blueprint — defines the backend Web Service.
+# Apply once via Dashboard → New → Blueprint → connect this repo.
+# Free instance type sleeps after ~15 min idle; first request after sleep
+# pays a ~30–60s cold-start. Health check on /health.
+
+services:
+  - type: web
+    name: sd-api
+    runtime: node
+    plan: free
+    region: singapore           # closest to Neon ap-southeast-1
+    rootDir: server
+    autoDeploy: true
+    branch: main
+
+    # tsx is in dependencies (commit 4825a08), so `npm run migrate` works at
+    # boot. Migration is idempotent — CREATE TABLE IF NOT EXISTS.
+    buildCommand: npm ci && npm run build
+    startCommand: npm run migrate && node dist/index.js
+
+    healthCheckPath: /health
+
+    envVars:
+      # Set these in the Render dashboard — values intentionally omitted
+      # from version control. After importing the Blueprint, open the
+      # service → Environment tab → fill the values shown below.
+      - key: DATABASE_URL
+        sync: false             # required, paste Neon pooler URL
+      - key: JWT_SECRET
+        sync: false             # required, 32+ random bytes
+      - key: CORS_ORIGINS
+        value: https://pavan-gattupalli-savii.github.io,http://localhost:5173
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: NODE_ENV
+        value: production

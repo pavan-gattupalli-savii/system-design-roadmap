@@ -1,7 +1,7 @@
 {
   "name": "system-design-api",
   "version": "1.0.0",
-  "description": "Node.js/Express API for system-design-python-roadmap",
+  "description": "Node.js/Express API for system-design-roadmap",
   "type": "commonjs",
   "main": "dist/index.js",
   "engines": {

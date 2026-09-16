@@ -36,7 +36,7 @@ function manualChunks(id) {
 
 export default defineConfig({
   plugins: [react()],
-  base: '/system-design-python-roadmap/',
+  base: '/system-design-roadmap/',
   build: {
     rollupOptions: {
       output: { manualChunks },

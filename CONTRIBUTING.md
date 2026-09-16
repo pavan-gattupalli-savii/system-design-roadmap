@@ -19,8 +19,8 @@ Thank you for your interest in contributing! This project is a living resource â
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/pavan-gattupalli-savii/system-design-python-roadmap.git
-cd system-design-python-roadmap
+git clone https://github.com/pavan-gattupalli-savii/system-design-roadmap.git
+cd system-design-roadmap
 
 # 2. Install dependencies
 npm install
@@ -206,4 +206,4 @@ Anonymise any identifying details. Open a PR with title: `feat(interviews): add 
 
 ## Questions?
 
-Open a [GitHub Discussion](https://github.com/pavan-gattupalli-savii/system-design-python-roadmap/discussions) or connect on [LinkedIn](https://www.linkedin.com/in/iamgpavan/).
+Open a [GitHub Discussion](https://github.com/pavan-gattupalli-savii/system-design-roadmap/discussions) or connect on [LinkedIn](https://www.linkedin.com/in/iamgpavan/).

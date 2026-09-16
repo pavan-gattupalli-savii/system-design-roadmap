@@ -1,224 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/overview</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/overview</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/daily</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/daily</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/readings</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/readings</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/interview</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/interview</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/concepts</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/concepts</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/about</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/about</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/contribute</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/contribute</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.40</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/sign-in</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/sign-in</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.20</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/1?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/1?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/2?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/2?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/3?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/3?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/4?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/4?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/5?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/5?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/6?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/6?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/7?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/7?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/8?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/8?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/9?lang=python</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/9?lang=python</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/1?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/1?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/2?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/2?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/3?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/3?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/4?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/4?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/5?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/5?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/6?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/6?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/7?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/7?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/8?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/8?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/roadmap/phase/9?lang=java</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/roadmap/phase/9?lang=java</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/resources/Book</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/resources/Book</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/resources/Article</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/resources/Article</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/resources/YouTube</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/resources/YouTube</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/resources/Docs</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/resources/Docs</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/resources/Paper</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/resources/Paper</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/resources/Course</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/resources/Course</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/resources/Build</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/resources/Build</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://pavan-gattupalli-savii.github.io/system-design-python-roadmap/app/resources/Lab</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://pavan-gattupalli-savii.github.io/system-design-roadmap/app/resources/Lab</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>

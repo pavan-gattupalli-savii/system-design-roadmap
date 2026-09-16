@@ -22,7 +22,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT      = path.resolve(__dirname, "..");
 const DIST      = path.join(ROOT, "dist");
-const BASE_PATH = "/system-design-python-roadmap";
+const BASE_PATH = "/system-design-roadmap";
 const PORT      = 4317;
 const CHROME    = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const execAsync = promisify(exec);

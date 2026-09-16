@@ -13,7 +13,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT      = path.resolve(__dirname, "..");
-const BASE_URL  = "https://pavan-gattupalli-savii.github.io/system-design-python-roadmap";
+const BASE_URL  = "https://pavan-gattupalli-savii.github.io/system-design-roadmap";
 const TODAY     = new Date().toISOString().slice(0, 10);
 
 const STATIC_ROUTES = [

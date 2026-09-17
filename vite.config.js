@@ -34,12 +34,13 @@ function manualChunks(id) {
   return undefined
 }
 
-export default defineConfig({
+export default defineConfig(({ command, isPreview }) => ({
   plugins: [react()],
-  base: '/system-design-roadmap/',
+  // Local development starts at /; builds and previews use the GitHub Pages path.
+  base: command === 'serve' && !isPreview ? '/' : '/system-design-roadmap/',
   build: {
     rollupOptions: {
       output: { manualChunks },
     },
   },
-})
+}))

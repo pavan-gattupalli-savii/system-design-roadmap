@@ -25,7 +25,7 @@ export const BUILD_SPECS: Record<string, BuildSpec> = {
     requirements: [
       "Accept two CLI arguments: the value (float) and the source unit (C, F, or K)",
       "Convert to all other two units and print results clearly formatted",
-      "Raise a custom TempConversionError for temperatures below absolute zero (−273.15 °C / −459.67 °F / 0 K)",
+      "Reject temperatures below absolute zero (−273.15 °C / −459.67 °F / 0 K); a custom exception is optional after week 3",
       "Handle non-numeric input with a helpful error message (not a raw traceback)",
       "Bonus: word frequency counter — read any text file and print the top-10 most frequent words",
     ],
@@ -33,7 +33,7 @@ export const BUILD_SPECS: Record<string, BuildSpec> = {
       "`python converter.py 100 C` prints: 100.0°C = 212.0°F = 373.15 K",
       "`python converter.py -500 C` prints: Error: −500°C is below absolute zero",
       "`python converter.py abc F` prints: Error: 'abc' is not a valid number",
-      "Word counter reads the file in one pass, uses collections.Counter, prints formatted table",
+      "Optional word-counter extension reads a file once and prints the top ten counts; finish the converter first",
     ],
     hints: [
       "Write one conversion function per pair (c_to_f, f_to_k, etc.) — 6 functions total",
@@ -48,7 +48,7 @@ export const BUILD_SPECS: Record<string, BuildSpec> = {
     overview:
       "Build a modular CLI todo manager split across three Python files. This teaches you how to structure a real Python project: domain models, a persistence layer, and a CLI front-end — each in its own module.",
     requirements: [
-      "models.py: Task dataclass with id (uuid), title (str), done (bool), created_at (datetime)",
+      "models.py: start with task dictionaries containing id, title, done and an ISO-format created_at string; refactor to a Task dataclass after week 5",
       "storage.py: load() reads tasks from todos.json; save(tasks) writes back; create the file if it doesn't exist",
       "cli.py: argparse sub-commands — add <title>, list (shows all), done <id>, delete <id>",
       "IDs can be the first 8 characters of the UUID — short enough to type",
@@ -85,7 +85,7 @@ export const BUILD_SPECS: Record<string, BuildSpec> = {
   Persistence: todos.json (list of dicts)
 `,
     hints: [
-      "Use `dataclasses.asdict(task)` to serialise a Task to JSON",
+      "Save dictionaries as JSON initially; after the dataclass refactor use asdict and convert datetime values with isoformat() explicitly",
       "Use `datetime.fromisoformat()` to deserialise the created_at field",
       "Use `uuid.uuid4()` to generate IDs, then `str(uid)[:8]` for the short form",
       "Add `if __name__ == '__main__': main()` in cli.py",
@@ -285,21 +285,21 @@ export const BUILD_SPECS: Record<string, BuildSpec> = {
     ],
   },
 
-  "Async scraper: asyncio + aiohttp, fetches 10 URLs concurrently, Protocol-typed scraper/storage, full type hints (strict mypy). 10× faster than sync.": {
+  "Async scraper: asyncio + aiohttp, fetches 10 URLs with bounded concurrency, timeouts, cancellation, Protocol-typed storage, and strict mypy. Measure against sync.": {
     difficulty: "intermediate",
     overview:
-      "Build an async web scraper that fetches 10 URLs concurrently using asyncio and aiohttp. Define typed Protocol interfaces for the scraper and storage components. Benchmark against the synchronous version to see the 10× speedup in action.",
+      "Build an async web scraper that fetches 10 URLs concurrently using asyncio and aiohttp. Define typed Protocol interfaces for the scraper and storage components. Benchmark the same controlled workload against a synchronous version; report latency, concurrency limits, errors, and environment rather than assuming a fixed speedup.",
     requirements: [
       "ScraperProtocol: `async def fetch(url: str) → str`; AiohttpScraper implements it",
       "StorageProtocol: `def save(url: str, content: str) → None`; FileStorage and MemoryStorage implement it",
-      "fetch_all(urls: list[str], scraper, storage): uses asyncio.gather or TaskGroup for concurrency",
+      "fetch_all(urls: list[str], scraper, storage): use a semaphore to cap concurrency, per-request timeouts, and gather or TaskGroup with an explicit failure policy",
       "Per-URL error handling — a failed URL logs the error but does not abort other fetches",
       "Benchmark script: measure sync (requests) vs async time for the same 10 URLs",
       "mypy --strict passes; all async functions have return type annotations",
     ],
     acceptance: [
-      "Async version completes 10 fetches in roughly the time of the slowest single request",
-      "Sync version takes approximately N × average_request_time",
+      "A controlled local HTTP fixture proves simultaneous in-flight requests never exceed the configured limit",
+      "Benchmark the same responses and connection settings in both modes; report timings and errors without a minimum speedup requirement",
       "A URL that returns 404 or times out is caught and logged, not raised",
       "`mypy --strict scraper.py` exits with zero errors",
     ],
@@ -320,7 +320,7 @@ export const BUILD_SPECS: Record<string, BuildSpec> = {
     hints: [
       "Use `async with aiohttp.ClientSession() as session:` — one session for all requests",
       "asyncio.gather(*[fetch(url) for url in urls], return_exceptions=True) catches per-task exceptions",
-      "Python 3.11+: prefer `asyncio.TaskGroup` over gather for better error handling",
+      "TaskGroup is fail-fast: catch expected per-URL failures inside tasks if partial results are required, and propagate CancelledError so shutdown can clean up",
       "Run with: `asyncio.run(main())` at the bottom of the file",
     ],
   },
@@ -364,7 +364,7 @@ export const BUILD_SPECS: Record<string, BuildSpec> = {
     ],
     acceptance: [
       "All 100 images are correctly resized and saved in the output directory",
-      "ThreadPool is at least 5× faster than sequential for downloads",
+      "Record sequential and ThreadPool timings for identical downloads; explain overhead and variability without a fixed speedup requirement",
       "ProcessPool is at least 2× faster than sequential for resize",
       "Timing table is printed at the end of the script",
     ],
@@ -1462,7 +1462,7 @@ export const BUILD_SPECS: Record<string, BuildSpec> = {
     overview:
       "Set up the complete infrastructure stack for your Twitter capstone project: FastAPI app, PostgreSQL, Redis, and Kafka — all in docker-compose with proper networking, health checks, and Alembic migrations.",
     requirements: [
-      "docker-compose.yml: fastapi, postgresql (15), redis (7), zookeeper, kafka (Confluent Platform or Bitnami)",
+      "docker-compose.yml: fastapi, postgresql, redis, kafka in KRaft mode; pin compatible image versions",
       "FastAPI: health endpoint GET /health → {status: 'ok', db: 'connected', redis: 'connected', kafka: 'connected'}",
       "PostgreSQL: Alembic migrations for initial schema (users, tweets tables)",
       "Kafka: create topics 'tweets' and 'notifications' on startup",

@@ -77,7 +77,7 @@ const DEEPEN: Record<string, Extras> = {
       "Heap dump opens in VisualVM / IntelliJ profiler without errors",
     ],
     extraHints: [
-      "Bench on -Xmx of the size you'd run in prod — tuning at 256MB tells you nothing about a 16GB heap",
+      "Benchmark representative heap sizes and allocation rates; document how a small local experiment differs from production",
       "-XX:+PrintFlagsFinal dumps every JVM flag including their effective values",
     ],
   },
@@ -286,7 +286,7 @@ const DEEPEN: Record<string, Extras> = {
       "Killing the inventory consumer mid-batch and restarting doesn't double-reserve any order",
       "1k orders/sec sustained for 30 seconds with no lag accumulation",
     ],
-    extraHints: ["Kafka transactions get you exactly-once at the cost of throughput — quantify before reaching for them"],
+    extraHints: ["Kafka transactions can atomically commit consumed offsets and output records within Kafka; consumers must use read_committed to hide aborted writes. Independent database writes still need atomic deduplication or coordination. Benchmark transactional overhead with your workload."],
   },
 
   "p4w24.0": {
@@ -369,7 +369,7 @@ const DEEPEN: Record<string, Extras> = {
   "p7w39.0": {
     extraReqs: [
       "Final runtime image runs as a non-root UID with explicit USER directive",
-      "BuildKit cache mounts speed up CI Maven builds by 3-5×",
+      "Measure cold and warm Maven builds with BuildKit cache mounts; savings depend on dependencies, network, and runner cache persistence",
     ],
     extraAccept: ["docker scan / Trivy reports zero CRITICAL or HIGH vulnerabilities on the runtime image"],
     extraHints: ["Order Dockerfile lines from least → most likely to change; cache invalidation respects order"],

@@ -19,7 +19,7 @@ function resId(phase: number, weekN: number, si: number, ri: number): string {
 const DEEPEN: Record<string, Extras> = {
   "p1w1.0": { extraHints: [
     "Sealed types only work if every permitted subtype lives in the same module — declare them next to the interface",
-    "Compact constructors fire BEFORE field assignment — perfect for validation, useless for transformation",
+    "Compact constructors can validate and normalize their parameters; implicit field assignment occurs after the body. Use defensive copies for mutable components.",
   ]},
   "p1w2.0": { extraHints: [
     "Collectors.groupingBy + Collectors.summarizingDouble is the idiomatic combo for aggregates",
@@ -34,12 +34,12 @@ const DEEPEN: Record<string, Extras> = {
     "Always specify your own Executor — the common ForkJoinPool gets noisy fast",
   ]},
   "p1w5.0": { extraHints: [
-    "G1 is the default; ZGC wins for huge heaps + low pause; Shenandoah wins for steady-state latency",
-    "VisualVM is free; Mission Control + JFR is built into the JDK and more powerful",
+    "Compare available collectors on the same JDK, heap, allocation rate, and load; report pause percentiles, throughput, and CPU rather than declaring a universal winner.",
+    "VisualVM is free; JFR is available in the JDK; install JDK Mission Control separately to inspect recordings",
   ]},
   "p1w6.0": { extraHints: [
     "LinkedHashMap(initialCapacity, loadFactor, accessOrder=true) is the entire LRU trick — don't write your own",
-    "PriorityQueue is min-heap by default — pass Comparator.reverseOrder() for top-K",
+    "For the K largest values, keep a min-heap of size K and evict its smallest member; use a max-heap when extracting largest-first from the full input.",
   ]},
 
   "p2w7.0": { extraHints: [
@@ -56,7 +56,7 @@ const DEEPEN: Record<string, Extras> = {
   ]},
   "p2w10.0": { extraHints: [
     "Sealed interfaces let the compiler verify every state is handled in a switch — make use of it",
-    "Don't model State as an enum + switch — that's the anti-pattern State pattern fixes",
+    "Use an enum plus explicit transition table for a small state machine; consider State objects when state-specific behavior warrants the extra abstraction",
   ]},
   "p2w11.0": { extraHints: [
     "Use ConcurrentSkipListSet of free spots if you need ordering; otherwise ConcurrentHashMap is fine",
@@ -81,7 +81,7 @@ const DEEPEN: Record<string, Extras> = {
   ]},
   "p3w14.0": { extraHints: [
     "Spring's ResponseEntityExceptionHandler covers 80% of error cases out of the box — extend it",
-    "@Validated on the controller class, @Valid on the @RequestBody — both, not one",
+    "Use @Valid on request DTOs; with Spring MVC 6.1 built-in method validation, remove class-level @Validated rather than forcing proxy-based validation",
   ]},
   "p3w15.0": { extraHints: [
     "Verify N+1 with Hibernate's `spring.jpa.properties.hibernate.generate_statistics=true` + a log appender",
@@ -93,7 +93,7 @@ const DEEPEN: Record<string, Extras> = {
   ]},
   "p3w17.0": { extraHints: [
     "@DataJpaTest for repos, @WebMvcTest for controllers, @SpringBootTest for E2E — keep them separate",
-    "Testcontainers' reuse mode (testcontainers.reuse.enable=true) cuts test boot time by 5×",
+    "Testcontainers reuse is an optional local optimization; reset test data explicitly and use isolated containers in CI. Measure startup savings on your machine.",
   ]},
   "p3w18.0": { extraHints: [
     "Cache .m2 by hashing pom.xml — caching by branch name is wasteful and stale",
@@ -101,7 +101,7 @@ const DEEPEN: Record<string, Extras> = {
   ]},
 
   "p4w21.0": { extraHints: [
-    "SET NX EX wins over SETNX + EXPIRE because it's atomic — never use the legacy variant",
+    "Acquire a lease with SET key unique-token NX EX seconds so acquisition and expiry are atomic. Release it only with an atomic token comparison and delete; expiry alone does not prevent a paused owner from writing after its lease ends.",
     "ZADD-based leaderboards scale to 1M entries; beyond that, shard by score range",
   ]},
   "p4w22.0": { extraHints: [

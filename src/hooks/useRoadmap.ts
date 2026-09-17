@@ -10,13 +10,13 @@ import type { Phase } from "../data/models";
 import { fetchRoadmap } from "../api/roadmap";
 import { qk } from "../lib/queryKeys";
 
-export function useRoadmap(lang: Language): { phases: Phase[]; isLoading: boolean } {
-  const { data, isLoading } = useQuery<Phase[]>({
+export function useRoadmap(lang: Language) {
+  const { data, isLoading, error, refetch } = useQuery<Phase[]>({
     queryKey:  qk.roadmap.byLang(lang),
     queryFn:   () => fetchRoadmap(lang),
     staleTime: 30 * 60_000,   // treat as fresh for 30 min
     gcTime:    60 * 60_000,   // keep in memory for 1 hr after last subscriber
   });
   const phases = data ?? [];
-  return { phases, isLoading: isLoading && phases.length === 0 };
+  return { phases, isLoading: isLoading && phases.length === 0, error, refetch };
 }

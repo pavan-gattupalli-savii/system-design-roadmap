@@ -40,7 +40,7 @@ type ResolutionSource =
   | "unresolved";
 
 const BOOK_URLS: Record<string, string> = {
-  "Fluent Python":              "https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf",
+  "Fluent Python":              "https://www.fluentpython.com/",
   "DDIA":                       "https://dataintensive.net/",
   "Google SRE Book":            "https://sre.google/sre-book/table-of-contents/",
   "Effective Java":             "https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/",

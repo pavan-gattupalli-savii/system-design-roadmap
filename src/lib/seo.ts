@@ -9,7 +9,7 @@ import { useEffect } from "react";
 const SITE_NAME = "System Design Mastery Roadmap";
 const SITE_BASE = "https://pavan-gattupalli-savii.github.io/system-design-roadmap";
 const DEFAULT_DESC =
-  "9-Month System Design Mastery Roadmap for working engineers — curated readings, real interview Q&A, and shared experiences. Python and Java tracks.";
+  "Self-Paced System Design Mastery Roadmap for working engineers — curated readings, real interview Q&A, and shared experiences. Python and Java tracks.";
 const BASE_PATH = "/system-design-roadmap";
 
 export interface SeoMeta {

@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "content:check": "tsc -p tsconfig.content.json && node scripts/content-audit.mjs && node --test scripts/content.test.mjs",
+    "content:links": "node scripts/content-audit.mjs --probe --out content-link-report.json",
     "dev": "vite",
+    "dev:api": "npm --prefix server run dev",
     "prebuild": "node scripts/gen-sitemap.mjs",
     "build": "vite build",
     "postbuild": "node scripts/prerender.mjs",

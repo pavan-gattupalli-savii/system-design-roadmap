@@ -184,7 +184,7 @@ const JAVA_SPECS: Record<string, SpecLike> = {
       "Resource: Product (id, name, price, stockCount). CRUD endpoints follow REST conventions",
       "DTO + entity separation; MapStruct or manual mapping",
       "@Valid + Bean Validation annotations on request DTOs (NotBlank, Positive, etc.)",
-      "@ControllerAdvice returns RFC 7807 Problem JSON for 400/404/500 — never a stack trace",
+      "@ControllerAdvice returns RFC 9457 Problem JSON for 400/404/500 — never a stack trace",
       "OpenAPI 3 spec served at /v3/api-docs and Swagger UI at /swagger-ui.html",
     ],
     acceptance: [
@@ -193,7 +193,7 @@ const JAVA_SPECS: Record<string, SpecLike> = {
       "OpenAPI spec includes every endpoint with correct request/response schemas",
     ],
     hints: [
-      "Spring's default ResponseEntityExceptionHandler already does most of the RFC 7807 work — extend it, don't replace it",
+      "Spring's default ResponseEntityExceptionHandler already does most of the RFC 9457 work — extend it, don't replace it",
       "Use Spring Data's optimistic locking via @Version to detect concurrent updates",
     ],
   },
@@ -260,7 +260,7 @@ const JAVA_SPECS: Record<string, SpecLike> = {
       "Throughput: 1k orders/sec on local Kafka with reasonable consumer count",
     ],
     hints: [
-      "Persist (consumer-group, order-id) somewhere durable to enforce idempotency — Redis SETNX or a DB unique index both work",
+      "Store an event-id deduplication record in the same DB transaction as the business update; a separate Redis SETNX cannot make the DB side effect atomic",
       "Avoid synchronous calls between services — that's a microservices anti-pattern",
     ],
   },
@@ -318,7 +318,7 @@ const JAVA_SPECS: Record<string, SpecLike> = {
       "Stage 1: maven:3.9-eclipse-temurin-21 builds the JAR with -DskipTests",
       "Stage 2: eclipse-temurin:21-jre-alpine copies only the runnable jar",
       "`.dockerignore` excludes target/, .git, IDE folders",
-      "docker-compose: app, postgres, redis, kafka, zookeeper with healthchecks + depends_on conditions",
+      "docker-compose: app, postgres, redis, kafka (KRaft mode) with healthchecks + depends_on conditions",
       "App reads DB URL etc from environment, never hard-coded",
     ],
     acceptance: [

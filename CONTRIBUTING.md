@@ -25,12 +25,30 @@ cd system-design-roadmap
 # 2. Install dependencies
 npm install
 
-# 3. Start the dev server (frontend only — no backend needed for concept work)
+# 3. Start the frontend dev server
 npm run dev
 # → http://localhost:5173
 ```
 
-The concepts section is entirely frontend — zero API calls. All content lives in `src/data/concepts/`.
+The roadmap, readings, and other database-backed pages also need the API running
+in a second terminal:
+
+```bash
+npm --prefix server install
+# On first setup, copy server/.env.example to server/.env and configure
+# DATABASE_URL and JWT_SECRET for your development environment.
+npm run dev:api
+# → http://localhost:3001
+```
+
+Set `VITE_API_BASE_URL=http://localhost:3001` in the root `.env` file and restart
+Vite after changing it. The API loads its configuration from `server/.env`.
+Its `CORS_ORIGINS` must include the frontend origin printed by Vite. A running
+frontend alone cannot load roadmap data; check `http://localhost:3001/health`
+if those pages fail to load.
+
+Concept source files live in `src/data/concepts/`; frontend-only work can use
+`npm run dev`, but API-backed content still requires the backend.
 
 ---
 

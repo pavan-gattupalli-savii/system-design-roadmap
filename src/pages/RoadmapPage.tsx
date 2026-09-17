@@ -45,12 +45,12 @@ export default function RoadmapPage() {
 
   const langLabel = lang === "python" ? "Python" : "Java";
   useSeoMeta({
-    title: `${langLabel} Roadmap — 9-month system design curriculum`,
-    description: `Week-by-week ${langLabel} system design curriculum: foundations, low-level design, high-level design, reliability and interview prep. 600+ curated free resources, organised into 9 phases.`,
+    title: `${langLabel} Roadmap — self-paced system design curriculum`,
+    description: `Week-by-week ${langLabel} system design curriculum: foundations, low-level design, high-level design, reliability and interview prep. curated resources, including free documentation and optional paid books, organised into 9 phases.`,
     canonical: `/app/roadmap?lang=${lang}`,
   });
 
-  const { phases: roadmap, isLoading } = useRoadmap(lang);
+  const { phases: roadmap, isLoading, error, refetch } = useRoadmap(lang);
   const flatWeeks = useMemo(() => getAllWeeks(roadmap), [roadmap]);
   const totalWeeks = flatWeeks.length ? flatWeeks[flatWeeks.length - 1].n : 54;
 
@@ -120,6 +120,17 @@ export default function RoadmapPage() {
   }
 
   const showSearch = searchQuery.trim().length > 0;
+
+  if (error && roadmap.length === 0) {
+    return (
+      <div role="alert" style={{ padding: 32, textAlign: "center" }}>
+        <h2>Couldn’t load the roadmap</h2>
+        <p>We couldn’t reach the roadmap service. Please try again.</p>
+        {import.meta.env.DEV && <p>For local development, start the API with <code>npm run dev:api</code>.</p>}
+        <button type="button" onClick={() => void refetch()}>Try again</button>
+      </div>
+    );
+  }
 
   if (isLoading) {
     return (

@@ -6,6 +6,8 @@
 // Prompts support markdown — embed fenced code, tables, scenarios freely.
 // Renderer = `src/components/MarkdownView.tsx`.
 
+import { REVIEW_CHECKS } from "./knowledge-checks-review";
+
 export type Runtime = "python" | "java";
 
 export interface McqSeed {
@@ -39,6 +41,7 @@ export interface WeekCheckSeed {
 }
 
 export const KNOWLEDGE_CHECKS: WeekCheckSeed[] = [
+  ...REVIEW_CHECKS,
   // ───────────────────────────────────────────────────────────────────────────
   // PYTHON · Phase 1 · Week 1 — "Python Setup & Core Syntax"
   // Sourced from: Python Tutorial Ch 3 (intro) + Ch 4 (control flow),

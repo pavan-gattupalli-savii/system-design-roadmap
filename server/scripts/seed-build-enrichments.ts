@@ -82,7 +82,7 @@ const ENRICH: Record<"python" | "java", Record<string, Enrichment>> = {
       pitfalls: ["Using ABC where Protocol fits better (structural typing)", "Forgetting frozen=True for immutable VOs"],
       prerequisites: ["Phase 1 OOP fundamentals"],
       references: [
-        { label: "Fluent Python — A Pythonic Object", url: "https://www.fluentpython.com/" },
+        { label: "Fluent Python — Interfaces, Protocols, and ABCs", url: "https://www.fluentpython.com/" },
       ],
     },
     "p2w6.0": {

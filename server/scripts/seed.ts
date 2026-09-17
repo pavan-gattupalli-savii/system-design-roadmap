@@ -90,8 +90,8 @@ async function seedRoadmapLanguage(language: "python" | "java", phases: typeof p
   for (const phase of phases) {
     // Insert phase
     const [phaseRow] = await sql`
-      INSERT INTO roadmap_phases (language, phase_number, title, icon, accent, light, description)
-      VALUES (${language}, ${phase.phase}, ${phase.title}, ${phase.icon}, ${phase.accent}, ${phase.light}, ${phase.desc ?? ""})
+      INSERT INTO roadmap_phases (language, phase_number, title, icon, accent, light, description, outcomes)
+      VALUES (${language}, ${phase.phase}, ${phase.title}, ${phase.icon}, ${phase.accent}, ${phase.light}, ${phase.desc ?? ""}, ${phase.outcomes ?? []})
       ON CONFLICT (language, phase_number) DO UPDATE
         SET title = EXCLUDED.title,
             icon  = EXCLUDED.icon
@@ -103,8 +103,8 @@ async function seedRoadmapLanguage(language: "python" | "java", phases: typeof p
     for (const week of phase.weeks) {
       // Insert week
       const [weekRow] = await sql`
-        INSERT INTO roadmap_weeks (phase_id, week_number, title)
-        VALUES (${phaseId}, ${week.n}, ${week.title})
+        INSERT INTO roadmap_weeks (phase_id, week_number, title, learning_objectives)
+        VALUES (${phaseId}, ${week.n}, ${week.title}, ${week.learningObjectives ?? []})
         ON CONFLICT (phase_id, week_number) DO UPDATE
           SET title = EXCLUDED.title
         RETURNING id
@@ -126,8 +126,8 @@ async function seedRoadmapLanguage(language: "python" | "java", phases: typeof p
         for (let ri = 0; ri < session.resources.length; ri++) {
           const res = session.resources[ri];
           await sql`
-            INSERT INTO roadmap_resources (session_id, type, item, where_text, mins, url, sort_order)
-            VALUES (${sessionId}, ${res.type}, ${res.item}, ${res.where}, ${res.mins}, ${res.url ?? null}, ${ri})
+            INSERT INTO roadmap_resources (session_id, type, item, where_text, mins, url, sort_order, is_core)
+            VALUES (${sessionId}, ${res.type}, ${res.item}, ${res.where}, ${res.mins}, ${res.url ?? null}, ${ri}, ${res.isCore ?? true})
           `;
           resourceCount++;
         }

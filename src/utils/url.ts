@@ -11,10 +11,10 @@ import type { Resource } from "../data/models";
  */
 function resolveUrl(where: string | undefined): string | null {
   if (!where) return null;
-  if (where.startsWith("http")) return where;
+  if (/^https?:\/\//i.test(where)) return where.split(/\s/)[0];
 
-  const yt = where.match(/YouTube\s*→\s*search\s*['"]([^'"]*?)['"]\s*/i);
-  if (yt) return `https://www.youtube.com/results?search_query=${encodeURIComponent(yt[1])}`;
+  const yt = where.match(/YouTube\s*→\s*search\s*(['"])(.*?)\1(?=\s*(?:—|$))/i);
+  if (yt) return `https://www.youtube.com/results?search_query=${encodeURIComponent(yt[2])}`;
 
   const rp = where.match(/realpython\.com\s*→\s*search\s*'([^']+)'/i);
   if (rp) return `https://realpython.com/search?q=${encodeURIComponent(rp[1])}`;

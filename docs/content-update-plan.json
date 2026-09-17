@@ -1,0 +1,4478 @@
+{
+  "version": 1,
+  "target": "79ecec04f7520b465c58306f2a500585602eeb2f7b68672de5b5dad1d7d242b8",
+  "baseline": "24cdd1e6a1bb6a24ac532b772e2c1d82a3874264",
+  "createdAt": "2026-09-17T12:37:13.870Z",
+  "changes": [
+    {
+      "table": "roadmap_phases",
+      "key": "java:1",
+      "id": 46,
+      "before": {
+        "description": "Master modern Java 21 \u2014 generics, streams, concurrency, JVM internals, and clean collection usage"
+      },
+      "after": {
+        "description": "Java 21 baseline: generics, streams, concurrency, JVM internals, and collections. Prerequisites: syntax, classes, exceptions, and basic tests. New to Java? Complete the free dev.java Learn foundations before week 1; use JDK 21 without preview flags for core exercises."
+      }
+    },
+    {
+      "table": "roadmap_phases",
+      "key": "java:3",
+      "id": 48,
+      "before": {
+        "outcomes": [
+          "Bootstrap Spring Boot 3 with DI, profiles, Actuator, and constructor injection by default",
+          "Author a CRUD REST API with Bean Validation + RFC 7807 error responses",
+          "Model with JPA + Flyway migrations without N+1 or production locking issues",
+          "Layer tests: unit (Mockito), slice (@WebMvcTest), integration (Testcontainers)",
+          "Wire JWT auth and lock down protected routes correctly"
+        ]
+      },
+      "after": {
+        "outcomes": [
+          "Bootstrap Spring Boot 3 with DI, profiles, Actuator, and constructor injection by default",
+          "Author a CRUD REST API with Bean Validation + RFC 9457 error responses",
+          "Model with JPA + Flyway migrations without N+1 or production locking issues",
+          "Layer tests: unit (Mockito), slice (@WebMvcTest), integration (Testcontainers)",
+          "Wire JWT auth and lock down protected routes correctly"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_phases",
+      "key": "java:4",
+      "id": 49,
+      "before": {
+        "outcomes": [
+          "Read EXPLAIN and design indexes that match the hot read path",
+          "Pick the right isolation level per workload and justify with anomaly examples",
+          "Choose between Postgres / MongoDB / Redis / DynamoDB with a real reason",
+          "Author Flyway migrations that don't lock production tables",
+          "Expose the same query over REST, GraphQL, and gRPC and pick the right one per client"
+        ]
+      },
+      "after": {
+        "outcomes": [
+          "Read EXPLAIN and design indexes that match the hot read path",
+          "Pick the right isolation level per workload and justify with anomaly examples",
+          "Choose between Postgres / MongoDB / Redis / DynamoDB with a real reason",
+          "Plan migrations with explicit lock budgets, compatibility windows, and recovery procedures",
+          "Expose the same query over REST, GraphQL, and gRPC and pick the right one per client"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "python:3_15",
+      "id": 221,
+      "before": {
+        "learning_objectives": [
+          "Translate verbal Library / Elevator prompts into clean class diagrams",
+          "Implement both end-to-end with unit tests in under 90 minutes"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Translate verbal Library / Elevator prompts into clean class diagrams",
+          "Implement a small tested slice of each design, then extend it across multiple practice sessions"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "python:5_21",
+      "id": 227,
+      "before": {
+        "learning_objectives": [
+          "Reason about REPEATABLE READ vs SERIALIZABLE on a concrete contention story",
+          "Write a schema migration that doesn't lock a 50M-row table"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Reason about REPEATABLE READ vs SERIALIZABLE on a concrete contention story",
+          "Demonstrate an isolation anomaly with two SQL sessions and explain how constraints or transaction isolation address it"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "python:5_22",
+      "id": 228,
+      "before": {
+        "learning_objectives": [
+          "Pick MongoDB vs Postgres vs Redis for a workload and defend it",
+          "Model a one-to-many relationship in Mongo without N+1"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Pick MongoDB vs Postgres vs Redis for a workload and defend it",
+          "Build and test a Redis leaderboard; explain rank ordering, ties, pagination and memory costs"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "python:5_24",
+      "id": 230,
+      "before": {
+        "learning_objectives": [
+          "State CAP, PACELC, and the actual trade-off PCs make in practice",
+          "Sketch how Raft elects a leader and survives a network partition"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Explain CAP's consistency/availability tradeoff during a partition and distinguish it from ordinary latency tradeoffs",
+          "Sketch how Raft elects a leader and survives a network partition"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "python:7_38",
+      "id": 244,
+      "before": {
+        "learning_objectives": [
+          "Implement typeahead with a trie + edit distance",
+          "Tune ranking signals for a search system"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Design typeahead with a trie or indexed lookup and state a latency target",
+          "Explain ranking, stale suggestions and batched versus real-time updates"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "python:7_41",
+      "id": 247,
+      "before": {
+        "learning_objectives": [
+          "Mock 5 HLD problems back-to-back under time pressure and debrief each"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Complete the three scheduled HLD mocks and record one concrete improvement after each"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "java:2_11",
+      "id": 266,
+      "before": {
+        "learning_objectives": [
+          "Translate Parking Lot + Library prompts into clean class diagrams",
+          "Ship both with unit tests in < 90 minutes"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Translate Parking Lot + Library prompts into clean class diagrams",
+          "Implement a tested core for each system; budget additional sessions for concurrency and edge cases"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "java:3_14",
+      "id": 269,
+      "before": {
+        "learning_objectives": [
+          "Author a CRUD API with Bean Validation + RFC 7807 problem JSON",
+          "Generate and serve OpenAPI 3 spec"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Author a CRUD API with Bean Validation + RFC 9457 problem JSON",
+          "Generate and serve OpenAPI 3 spec"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "java:3_18",
+      "id": 273,
+      "before": {
+        "title": "Build Tools, Gradle & CI/CD Basics"
+      },
+      "after": {
+        "title": "Maven & CI/CD Basics"
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "java:4_21",
+      "id": 276,
+      "before": {
+        "learning_objectives": [
+          "Build a real-time leaderboard with Redis sorted sets",
+          "Use SETNX for distributed locks + TTL for sessions"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Build a real-time leaderboard with Redis sorted sets",
+          "Implement an expiring single-instance lease with SET NX PX and ownership-checked release; explain failover and stale-owner limits"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "java:4_22",
+      "id": 277,
+      "before": {
+        "learning_objectives": [
+          "Author Flyway migrations that don't lock a 10M-row table",
+          "Define a rollback strategy per migration"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Measure lock duration on representative data; use expand/contract changes and concurrent index creation where supported",
+          "Define a rollback strategy per migration"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_weeks",
+      "key": "java:4_23",
+      "id": 278,
+      "before": {
+        "learning_objectives": [
+          "Wire Kafka producer / consumer with idempotent processing + DLQ",
+          "Pick at-least-once vs exactly-once and explain trade-off"
+        ]
+      },
+      "after": {
+        "learning_objectives": [
+          "Wire Kafka producer / consumer with idempotent processing + DLQ",
+          "Explain the boundary of Kafka transactional guarantees and make external database effects idempotent"
+        ]
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:1_1_0_1",
+      "id": 1064,
+      "before": {
+        "type": "YouTube",
+        "item": "Tech With Tim \u2013 'Python for Beginners (Full Course)'",
+        "where_text": "YouTube \u2192 search 'Tech With Tim Python for beginners' \u2014 watch up to functions section",
+        "mins": 60,
+        "url": "https://www.youtube.com/results?search_query=Tech%20With%20Tim%20Python%20for%20beginners"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Python Tutorial \u2014 getting started and virtual environments",
+        "where_text": "Install Python 3.12+; verify python --version, create a venv, and run a script. Read the introduction and control-flow sections next.",
+        "mins": 45,
+        "url": "https://docs.python.org/3/tutorial/venv.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:1_2_0_1",
+      "id": 1070,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Corey Schafer Python functions' \u2014 2 videos, ~30 min each",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Corey Schafer Python functions' \u2014 2 videos, ~30 min each",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:1_2_1_1",
+      "id": 1072,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Corey Schafer comprehensions Python'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Corey Schafer comprehensions Python'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:1_2_2_0",
+      "id": 1073,
+      "before": {
+        "where_text": "Use argparse for CLI. Import between modules. Ask Claude to review module design!",
+        "mins": 75
+      },
+      "after": {
+        "where_text": "Start with dictionaries for tasks; dataclasses are introduced in week 5. Handle missing files and invalid JSON. Add/list/done/delete must survive restarting the program.",
+        "mins": 180
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:1_3_0_1",
+      "id": 1075,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Corey Schafer Python OOP' \u2014 all 6 parts, ~1.5 hrs total",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Corey Schafer Python OOP' \u2014 all 6 parts, ~1.5 hrs total",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:1_4_0_0",
+      "id": 1079,
+      "before": {
+        "type": "Article",
+        "item": "Real Python \u2013 'Python's list, dict and set \u2014 time complexities'",
+        "where_text": "wiki.python.org/moin/TimeComplexity \u2014 print this out and memorise it"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Python Wiki \u2014 Time Complexity",
+        "where_text": "CPython complexity reference: distinguish average from amortized/worst-case costs. Compare list.pop(0) with deque.popleft()."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:1_4_0_1",
+      "id": 1080,
+      "before": {
+        "where_text": "YouTube \u2192 search 'CS Dojo Big O notation introduction'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'CS Dojo Big O notation introduction'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:1_4_1_1",
+      "id": 1082,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Tech With Tim Git GitHub beginners'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Tech With Tim Git GitHub beginners'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_5_0_1",
+      "id": 1085,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes dataclasses'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes dataclasses'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_5_1_0",
+      "id": 1086,
+      "before": {
+        "item": "Fluent Python 2e \u2013 Ch 11 'A Pythonic Object'",
+        "where_text": "pp. 321\u2013360 \u2014 ABCs, Protocols, duck typing vs goose typing",
+        "url": "https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf"
+      },
+      "after": {
+        "item": "Fluent Python 2e \u2013 Ch 13 'Interfaces, Protocols, and ABCs'",
+        "where_text": "ABCs, Protocols, duck typing vs goose typing",
+        "url": "https://www.fluentpython.com/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_5_1_1",
+      "id": 1087,
+      "before": {
+        "type": "YouTube",
+        "item": "ArjanCodes \u2013 'ABCs vs Protocols in Python'",
+        "where_text": "YouTube \u2192 search 'arjan codes abc vs protocol python'",
+        "url": "https://www.youtube.com/results?search_query=arjan%20codes%20abc%20vs%20protocol%20python"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Python typing \u2014 Protocol and structural subtyping",
+        "where_text": "Free companion to Fluent Python chapter 13: implement the same interface with an ABC and a Protocol; explain static checking versus runtime validation.",
+        "url": "https://docs.python.org/3/library/typing.html#typing.Protocol"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_6_0_0",
+      "id": 1089,
+      "before": {
+        "where_text": "pp. 693\u2013726 \u2014 the mechanism behind @property, @classmethod, @staticmethod",
+        "url": "https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf"
+      },
+      "after": {
+        "where_text": "the mechanism behind @property, @classmethod, @staticmethod",
+        "url": "https://www.fluentpython.com/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_6_0_1",
+      "id": 1090,
+      "before": {
+        "type": "YouTube",
+        "item": "ArjanCodes \u2013 'Python Descriptors Explained'",
+        "where_text": "YouTube \u2192 search 'arjan codes python descriptors'",
+        "url": "https://www.youtube.com/results?search_query=arjan%20codes%20python%20descriptors"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Python Descriptor Guide",
+        "where_text": "Trace attribute lookup and distinguish data/non-data descriptors. Treat metaclasses as optional depth after descriptors and class decorators.",
+        "url": "https://docs.python.org/3/howto/descriptor.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_6_1_0",
+      "id": 1091,
+      "before": {
+        "where_text": "pp. 729\u2013778 \u2014 __init_subclass__, metaclass basics, class decorators",
+        "url": "https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf"
+      },
+      "after": {
+        "where_text": "__init_subclass__, metaclass basics, class decorators",
+        "url": "https://www.fluentpython.com/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_6_1_1",
+      "id": 1092,
+      "before": {
+        "where_text": "YouTube \u2192 search 'mCoding python metaclasses'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'mCoding python metaclasses'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_7_0_0",
+      "id": 1094,
+      "before": {
+        "where_text": "pp. 525\u2013586 \u2014 yield, yield from, generator expressions, infinite sequences",
+        "url": "https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf"
+      },
+      "after": {
+        "where_text": "yield, yield from, generator expressions, infinite sequences",
+        "url": "https://www.fluentpython.com/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_7_0_1",
+      "id": 1095,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes python generators'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes python generators'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_7_1_1",
+      "id": 1097,
+      "before": {
+        "where_text": "YouTube \u2192 search 'mCoding context managers python'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'mCoding context managers python'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_8_0_0",
+      "id": 1099,
+      "before": {
+        "where_text": "pp. 615\u2013670 \u2014 threads vs processes vs asyncio, when to use each",
+        "url": "https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf"
+      },
+      "after": {
+        "where_text": "threads vs processes vs asyncio, when to use each",
+        "url": "https://www.fluentpython.com/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_8_0_1",
+      "id": 1100,
+      "before": {
+        "type": "YouTube",
+        "item": "ArjanCodes \u2013 'AsyncIO in Python'",
+        "where_text": "YouTube \u2192 search 'arjan codes asyncio python'",
+        "url": "https://www.youtube.com/results?search_query=arjan%20codes%20asyncio%20python"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "asyncio \u2014 tasks, cancellation, TaskGroup and timeouts",
+        "where_text": "TaskGroup cancels sibling tasks when a task fails. Compare fail-fast behavior with gather(return_exceptions=True); never swallow cancellation accidentally.",
+        "url": "https://docs.python.org/3/library/asyncio-task.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_8_1_1",
+      "id": 1102,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes python type hints'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes python type hints'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_8_2_0",
+      "id": 1103,
+      "before": {
+        "item": "Async scraper: asyncio + aiohttp, fetches 10 URLs concurrently, Protocol-typed scraper/storage, full type hints (strict mypy). 10\u00d7 faster than sync."
+      },
+      "after": {
+        "item": "Async scraper: asyncio + aiohttp, fetches 10 URLs with bounded concurrency, timeouts, cancellation, Protocol-typed storage, and strict mypy. Measure against sync."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_9_0_1",
+      "id": 1105,
+      "before": {
+        "where_text": "YouTube \u2192 search 'mCoding functools python'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'mCoding functools python'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_10_0_0",
+      "id": 1109,
+      "before": {
+        "where_text": "pp. 615\u2013670 \u2014 CPU-bound vs I/O-bound. The GIL explained clearly.",
+        "url": "https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf"
+      },
+      "after": {
+        "where_text": "CPU-bound vs I/O-bound. The GIL explained clearly.",
+        "url": "https://www.fluentpython.com/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_10_0_1",
+      "id": 1110,
+      "before": {
+        "type": "YouTube",
+        "item": "mCoding \u2013 'Python GIL Explained'",
+        "where_text": "YouTube \u2192 search 'mCoding Python GIL'",
+        "url": "https://www.youtube.com/results?search_query=mCoding%20Python%20GIL"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Python free-threading HOWTO",
+        "where_text": "Distinguish conventional GIL-enabled CPython from optional free-threaded builds. Native extensions may release or re-enable the GIL; record the runtime in benchmarks.",
+        "url": "https://docs.python.org/3/howto/free-threading-python.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_10_1_1",
+      "id": 1112,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes python concurrency'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes python concurrency'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:2_10_2_0",
+      "id": 1113,
+      "before": {
+        "where_text": "Print timing table. Ask Claude: 'Why does threading help for I/O but not CPU?'",
+        "mins": 75
+      },
+      "after": {
+        "where_text": "Separate download and resize timings. Pillow/native code may release the GIL, so measure threads rather than assuming they cannot help CPU work. Include startup and serialization costs.",
+        "mins": 180
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_11_0_0",
+      "id": 1114,
+      "before": {
+        "item": "refactoring.guru \u2013 SOLID in Python (all 5 sections)",
+        "where_text": "refactoring.guru/solid \u2014 Python examples throughout. Read SRP + OCP + LSP first.",
+        "url": "https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design"
+      },
+      "after": {
+        "item": "Real Python \u2013 SOLID Design Principles in Python",
+        "where_text": "realpython.com/solid-principles-python/ \u2014 Python examples throughout. Read SRP + OCP + LSP first.",
+        "url": "https://realpython.com/solid-principles-python/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_11_0_1",
+      "id": 1115,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes solid design principles'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes solid design principles'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_11_1_0",
+      "id": 1116,
+      "before": {
+        "item": "refactoring.guru \u2013 ISP + DIP in Python",
+        "where_text": "refactoring.guru/solid \u2014 last two sections",
+        "url": "https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design"
+      },
+      "after": {
+        "item": "Real Python \u2013 Interface Segregation and Dependency Inversion",
+        "where_text": "realpython.com/solid-principles-python/ \u2014 last two sections",
+        "url": "https://realpython.com/solid-principles-python/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_11_1_1",
+      "id": 1117,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes dependency inversion'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes dependency inversion'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_12_0_1",
+      "id": 1121,
+      "before": {
+        "where_text": "pp. 109\u2013168 \u2014 very visual"
+      },
+      "after": {
+        "where_text": "very visual"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_12_1_1",
+      "id": 1123,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes builder pattern'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes builder pattern'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_12_2_0",
+      "id": 1124,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes factory pattern'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes factory pattern'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_13_0_1",
+      "id": 1127,
+      "before": {
+        "where_text": "pp. 79\u2013107 \u2014 Starbucks coffee analogy"
+      },
+      "after": {
+        "where_text": "Starbucks coffee analogy"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_13_1_1",
+      "id": 1129,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes proxy pattern'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes proxy pattern'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_14_0_1",
+      "id": 1133,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes observer pattern'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes observer pattern'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_14_1_1",
+      "id": 1135,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes state pattern'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes state pattern'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_15_0_0",
+      "id": 1137,
+      "before": {
+        "where_text": "YouTube \u2014 pick a good walkthrough",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2014 pick a good walkthrough",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_16_0_0",
+      "id": 1141,
+      "before": {
+        "where_text": "YouTube \u2014 pick a recent video",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2014 pick a recent video",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_16_1_0",
+      "id": 1143,
+      "before": {
+        "type": "Blog",
+        "item": "Gergely Orosz \u2013 'How to Write a Good Design Document'",
+        "where_text": "blog.pragmaticengineer.com or search his name + design doc",
+        "url": "https://blog.pragmaticengineer.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Google Engineering Practices \u2014 design review",
+        "where_text": "Review overall design, complexity, tests and documentation. Write requirements, alternatives, failure cases and tradeoffs in your design note.",
+        "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:3_16_1_1",
+      "id": 1144,
+      "before": {
+        "type": "Article",
+        "item": "Google Design Doc format",
+        "where_text": "Search 'google design doc template one-pager'",
+        "url": "https://www.google.com/search?q=google%20design%20doc%20template%20one-pager"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Architecture decision records \u2014 rationale and template",
+        "where_text": "Record context, decision, alternatives and consequences; use a short ADR for one significant design choice.",
+        "url": "https://adr.github.io/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:4_17_0_1",
+      "id": 1148,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes pytest best practices'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes pytest best practices'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:4_18_0_1",
+      "id": 1153,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes python mocking'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes python mocking'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:4_18_1_0",
+      "id": 1154,
+      "before": {
+        "type": "Article",
+        "item": "Real Python \u2013 'Getting Started with TDD in Python'",
+        "where_text": "realpython.com/python-tdd-introduction/",
+        "url": "https://realpython.com/courses/test-driven-development-pytest/"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "pytest \u2014 good integration practices",
+        "where_text": "Use a failing behavior test, implement the smallest passing change, then refactor. Keep integration tests separate from mocked unit tests.",
+        "url": "https://docs.pytest.org/en/stable/explanation/goodpractices.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:4_18_1_1",
+      "id": 1155,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes TDD python'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes TDD python'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:4_19_1_1",
+      "id": 1160,
+      "before": {
+        "where_text": "YouTube \u2192 search 'arjan codes python code quality'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'arjan codes python code quality'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_20_0_0",
+      "id": 1162,
+      "before": {
+        "item": "DDIA \u2013 Ch 1 'Reliable, Scalable, Maintainable'",
+        "where_text": "pp. 3\u201330 \u2014 read slowly. Sets the mental model."
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 1 'Reliable, Scalable, Maintainable'",
+        "where_text": "read slowly. Sets the mental model."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_20_0_1",
+      "id": 1163,
+      "before": {
+        "item": "DDIA \u2013 Ch 3 'Storage and Retrieval' (B-Tree section)",
+        "where_text": "pp. 69\u201399 \u2014 how indexes work on disk"
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 3 'Storage and Retrieval' (B-Tree section)",
+        "where_text": "how indexes work on disk"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_20_1_1",
+      "id": 1165,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser database indexing'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser database indexing'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_21_0_0",
+      "id": 1167,
+      "before": {
+        "item": "DDIA \u2013 Ch 7 'Transactions'",
+        "where_text": "pp. 221\u2013270 \u2014 ACID, isolation levels, write skew"
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 7 'Transactions'",
+        "where_text": "ACID, isolation levels, write skew"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_21_0_1",
+      "id": 1168,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser database transactions'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser database transactions'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_22_0_0",
+      "id": 1173,
+      "before": {
+        "item": "DDIA \u2013 Ch 2 'Data Models and Query Languages'",
+        "where_text": "pp. 31\u201363 \u2014 document, relational, graph models compared"
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 2 'Data Models and Query Languages'",
+        "where_text": "document, relational, graph models compared"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_22_0_1",
+      "id": 1174,
+      "before": {
+        "where_text": "YouTube \u2192 search 'fireship sql nosql'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'fireship sql nosql'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_22_1_0",
+      "id": 1175,
+      "before": {
+        "where_text": "university.redis.com \u2014 FREE, ~3 hours total",
+        "url": "https://university.redis.com"
+      },
+      "after": {
+        "where_text": "university.redis.io \u2014 FREE, ~3 hours total",
+        "url": "https://university.redis.io"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_22_1_1",
+      "id": 1176,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser redis crash course'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser redis crash course'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_22_2_0",
+      "id": 1177,
+      "before": {
+        "where_text": "redis.io/docs/data-types/sorted-sets/",
+        "url": "https://redis.io/docs/data-types/sorted-sets/"
+      },
+      "after": {
+        "where_text": "redis.io/docs/latest/develop/data-types/sorted-sets/",
+        "url": "https://redis.io/docs/latest/develop/data-types/sorted-sets/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_23_0_0",
+      "id": 1179,
+      "before": {
+        "item": "DDIA \u2013 Ch 5 'Replication' (full chapter)",
+        "where_text": "pp. 151\u2013194 \u2014 leader-follower, multi-leader, leaderless"
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 5 'Replication' (full chapter)",
+        "where_text": "leader-follower, multi-leader, leaderless"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_23_0_1",
+      "id": 1180,
+      "before": {
+        "where_text": "YouTube \u2192 search 'martin kleppmann distributed systems replication'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'martin kleppmann distributed systems replication'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_23_1_0",
+      "id": 1181,
+      "before": {
+        "item": "DDIA \u2013 Ch 6 'Partitioning'",
+        "where_text": "pp. 199\u2013228 \u2014 key range vs hash, secondary indexes"
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 6 'Partitioning'",
+        "where_text": "key range vs hash, secondary indexes"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_23_1_1",
+      "id": 1182,
+      "before": {
+        "where_text": "YouTube \u2192 search 'gaurav sen database sharding'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'gaurav sen database sharding'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_24_0_0",
+      "id": 1185,
+      "before": {
+        "item": "DDIA \u2013 Ch 8 'The Trouble with Distributed Systems'",
+        "where_text": "pp. 273\u2013320 \u2014 clocks, networks, partial failures"
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 8 'The Trouble with Distributed Systems'",
+        "where_text": "clocks, networks, partial failures"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_24_0_1",
+      "id": 1186,
+      "before": {
+        "item": "DDIA \u2013 Ch 9 'Consistency and Consensus'",
+        "where_text": "pp. 321\u2013370 \u2014 linearizability, Raft, 2PC"
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 9 'Consistency and Consensus'",
+        "where_text": "linearizability, Raft, 2PC"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_24_1_0",
+      "id": 1187,
+      "before": {
+        "where_text": "YouTube \u2192 search 'martin kleppmann cap theorem'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'martin kleppmann cap theorem'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_24_1_1",
+      "id": 1188,
+      "before": {
+        "type": "Article",
+        "item": "Aphyr \u2013 'Please stop calling databases CP or AP'",
+        "where_text": "Search: 'aphyr please stop calling databases CP AP'",
+        "url": "https://www.google.com/search?q=aphyr%20please%20stop%20calling%20databases%20CP%20AP"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Martin Kleppmann \u2014 Please stop calling databases CP or AP",
+        "where_text": "Read the author\u2019s argument: qualify consistency and availability by operation and failure assumptions rather than labeling an entire database.",
+        "url": "https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_25_0_0",
+      "id": 1191,
+      "before": {
+        "type": "Blog",
+        "item": "AWS Blog \u2013 'How Amazon S3 Works'",
+        "where_text": "aws.amazon.com/blogs \u2192 search 'S3 architecture'",
+        "url": "https://aws.amazon.com/blogs"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Amazon S3 \u2014 object storage overview",
+        "where_text": "Read buckets, objects and access controls; separate object storage durability from CDN cache behavior.",
+        "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_25_0_1",
+      "id": 1192,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego cdn explained'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego cdn explained'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_25_1_0",
+      "id": 1193,
+      "before": {
+        "where_text": "elastic.co/guide/en/elasticsearch/reference/current/getting-started.html",
+        "url": "https://elastic.co/guide/en/elasticsearch/reference/current/getting-started.html"
+      },
+      "after": {
+        "where_text": "www.elastic.co/docs/solutions/search/get-started",
+        "url": "https://www.elastic.co/docs/solutions/search/get-started"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:5_25_1_1",
+      "id": 1194,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego elasticsearch'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego elasticsearch'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_26_0_0",
+      "id": 1197,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser http1 http2 http3'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser http1 http2 http3'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_26_0_1",
+      "id": 1198,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser how http works'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser how http works'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_26_1_0",
+      "id": 1199,
+      "before": {
+        "type": "Article",
+        "item": "REST API best practices 2024",
+        "where_text": "Search 'REST API design best practices 2024'",
+        "url": "https://www.google.com/search?q=REST%20API%20design%20best%20practices%202024"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Zalando REST API Guidelines",
+        "where_text": "Read HTTP methods/status codes, pagination, idempotency and compatibility; justify deviations for your API.",
+        "url": "https://opensource.zalando.com/restful-api-guidelines/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_27_0_0",
+      "id": 1202,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser grpc crash course'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser grpc crash course'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_27_1_0",
+      "id": 1204,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser websockets'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser websockets'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_28_0_0",
+      "id": 1208,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego message queue'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego message queue'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_28_0_1",
+      "id": 1209,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser kafka crash course'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser kafka crash course'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_28_1_0",
+      "id": 1210,
+      "before": {
+        "item": "DDIA \u2013 Ch 11 'Stream Processing'",
+        "where_text": "pp. 439\u2013490 \u2014 Kafka internals, exactly-once delivery"
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 11 'Stream Processing'",
+        "where_text": "Kafka internals, exactly-once delivery"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_28_1_1",
+      "id": 1211,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego kafka rabbitmq'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego kafka rabbitmq'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_29_0_0",
+      "id": 1214,
+      "before": {
+        "where_text": "pp. 55\u201380 \u2014 token bucket, leaky bucket, sliding window"
+      },
+      "after": {
+        "where_text": "token bucket, leaky bucket, sliding window"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_29_0_1",
+      "id": 1215,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego rate limiter'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego rate limiter'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_29_1_1",
+      "id": 1217,
+      "before": {
+        "where_text": "YouTube \u2192 search 'fireship graphql'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'fireship graphql'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_30_0_1",
+      "id": 1221,
+      "before": {
+        "where_text": "YouTube \u2192 search 'fireship oauth 2.0'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'fireship oauth 2.0'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_30_1_0",
+      "id": 1222,
+      "before": {
+        "item": "FastAPI Security \u2013 OAuth2 with JWT",
+        "where_text": "fastapi.tiangolo.com/tutorial/security/",
+        "url": "https://fastapi.tiangolo.com/tutorial/security/"
+      },
+      "after": {
+        "item": "FastAPI \u2014 OAuth2, password hashing and JWT",
+        "where_text": "Follow the PyJWT and pwdlib example. Treat it as a learning example, then add object-level authorization, token expiry tests, and refresh-token replay handling.",
+        "url": "https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_30_2_0",
+      "id": 1224,
+      "before": {
+        "where_text": "Use python-jose + passlib. Write integration tests."
+      },
+      "after": {
+        "where_text": "Follow the FastAPI JWT tutorial with PyJWT + pwdlib[argon2]. Test expiry, invalid signatures, ownership checks, and refresh-token replay."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_31_0_0",
+      "id": 1225,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser tcp vs udp'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser tcp vs udp'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_31_0_1",
+      "id": 1226,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser https ssl tls'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser https ssl tls'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_31_1_0",
+      "id": 1227,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser proxy reverse proxy'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser proxy reverse proxy'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:6_31_1_1",
+      "id": 1228,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego dns explained'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego dns explained'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_32_0_0",
+      "id": 1231,
+      "before": {
+        "where_text": "pp. 1\u201322"
+      },
+      "after": {
+        "where_text": "Read the named chapter; paid book access may be required. Summarize the design assumptions and tradeoffs."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_32_0_1",
+      "id": 1232,
+      "before": {
+        "where_text": "pp. 23\u201332 \u2014 memorize these numbers"
+      },
+      "after": {
+        "where_text": "memorize these numbers"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_32_1_0",
+      "id": 1233,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego system design framework'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego system design framework'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_33_0_0",
+      "id": 1237,
+      "before": {
+        "where_text": "YouTube \u2192 search 'hussein nasser load balancing'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'hussein nasser load balancing'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_33_0_1",
+      "id": 1238,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego cache systems'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego cache systems'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_33_1_1",
+      "id": 1240,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego horizontal vertical scaling'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego horizontal vertical scaling'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_33_2_1",
+      "id": 1242,
+      "before": {
+        "where_text": "pp. 143\u2013162 \u2014 read after your own attempt"
+      },
+      "after": {
+        "where_text": "read after your own attempt"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_34_0_0",
+      "id": 1243,
+      "before": {
+        "where_text": "pp. 81\u2013101 \u2014 critical HLD building block"
+      },
+      "after": {
+        "where_text": "critical HLD building block"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_34_0_1",
+      "id": 1244,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego consistent hashing'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego consistent hashing'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_34_1_0",
+      "id": 1245,
+      "before": {
+        "where_text": "pp. 103\u2013130"
+      },
+      "after": {
+        "where_text": "Read the named chapter; paid book access may be required. Summarize the design assumptions and tradeoffs."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_35_0_0",
+      "id": 1248,
+      "before": {
+        "where_text": "pp. 199\u2013213 \u2014 push vs pull vs hybrid, fanout"
+      },
+      "after": {
+        "where_text": "push vs pull vs hybrid, fanout"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_35_0_1",
+      "id": 1249,
+      "before": {
+        "where_text": "YouTube \u2192 search 'gaurav sen news feed design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'gaurav sen news feed design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_35_1_0",
+      "id": 1250,
+      "before": {
+        "type": "Blog",
+        "item": "Instagram Engineering \u2013 scaling posts",
+        "where_text": "instagram-engineering.com \u2014 search 'scaling'",
+        "url": "https://instagram-engineering.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Meta Engineering \u2014 How Threads infrastructure was built",
+        "where_text": "A historical production case study. Compare its constraints with your own feed design rather than copying its architecture.",
+        "url": "https://engineering.fb.com/2023/12/19/core-infra/how-meta-built-the-infrastructure-for-threads/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_35_1_1",
+      "id": 1251,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego design twitter'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego design twitter'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_36_0_0",
+      "id": 1253,
+      "before": {
+        "where_text": "pp. 215\u2013240"
+      },
+      "after": {
+        "where_text": "Read the named chapter; paid book access may be required. Summarize the design assumptions and tradeoffs."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_36_0_1",
+      "id": 1254,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego whatsapp system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego whatsapp system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_36_1_0",
+      "id": 1255,
+      "before": {
+        "type": "Blog",
+        "item": "High Scalability \u2013 'WhatsApp Architecture' summary",
+        "where_text": "highscalability.com \u2014 search 'whatsapp'",
+        "url": "https://highscalability.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Slack Engineering \u2014 real-time messaging",
+        "where_text": "Study persistent connections and routing; explain reconnect, delivery and fanout behavior in your own design.",
+        "url": "https://slack.engineering/real-time-messaging/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_36_1_1",
+      "id": 1256,
+      "before": {
+        "where_text": "YouTube \u2192 search 'gaurav sen messenger system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'gaurav sen messenger system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_37_0_1",
+      "id": 1259,
+      "before": {
+        "where_text": "YouTube \u2192 search 'codeopinion saga pattern microservices'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'codeopinion saga pattern microservices'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_37_1_0",
+      "id": 1260,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego uber system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego uber system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_37_1_1",
+      "id": 1261,
+      "before": {
+        "type": "Blog",
+        "item": "Uber Engineering Blog \u2013 architecture articles",
+        "where_text": "eng.uber.com \u2014 search 'domain-oriented microservices'",
+        "url": "https://eng.uber.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Uber \u2014 Domain-Oriented Microservice Architecture",
+        "where_text": "Study service boundaries and dependencies; identify when a modular monolith is simpler for your project.",
+        "url": "https://www.uber.com/us/en/blog/microservice-architecture/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_38_0_0",
+      "id": 1263,
+      "before": {
+        "where_text": "pp. 241\u2013260"
+      },
+      "after": {
+        "where_text": "Read the named chapter; paid book access may be required. Summarize the design assumptions and tradeoffs."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_38_0_1",
+      "id": 1264,
+      "before": {
+        "where_text": "YouTube \u2192 search 'gaurav sen typeahead suggestion'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'gaurav sen typeahead suggestion'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_38_1_0",
+      "id": 1265,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego google search'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego google search'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_38_1_1",
+      "id": 1266,
+      "before": {
+        "type": "Book",
+        "item": "System Design Interview Vol 2 \u2013 'Design Google Search' chapter",
+        "where_text": "Read the web crawler + inverted index sections",
+        "url": "https://bytebytego.com/courses/system-design-interview/foreword"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Stanford \u2014 Introduction to Information Retrieval",
+        "where_text": "Free textbook: start with Boolean retrieval and inverted indexes; use the web crawling chapter for crawl-frontier and politeness design.",
+        "url": "https://nlp.stanford.edu/IR-book/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_39_0_0",
+      "id": 1268,
+      "before": {
+        "type": "Book",
+        "item": "System Design Interview Vol 2 \u2013 'Design YouTube'",
+        "where_text": "pp. 179\u2013209 \u2014 upload, transcoding pipeline, streaming, CDN",
+        "url": "https://bytebytego.com/courses/system-design-interview/foreword"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Netflix Open Connect \u2014 CDN architecture",
+        "where_text": "Study content placement and delivery. Design upload/transcoding separately; do not assume the CDN handles the whole video pipeline.",
+        "url": "https://openconnect.netflix.com/en/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_39_0_1",
+      "id": 1269,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego netflix system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego netflix system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_39_1_0",
+      "id": 1270,
+      "before": {
+        "type": "Blog",
+        "item": "Netflix Tech Blog \u2013 video encoding/transcoding",
+        "where_text": "netflixtechblog.com \u2014 search 'encoding' or 'video pipeline'",
+        "url": "https://netflixtechblog.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Netflix Open Connect \u2014 deployment and delivery",
+        "where_text": "Compare embedded and peering delivery; identify origin, cache and network failure modes.",
+        "url": "https://openconnect.netflix.com/en/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_39_1_1",
+      "id": 1271,
+      "before": {
+        "type": "Article",
+        "item": "HLS vs DASH adaptive streaming protocols",
+        "where_text": "Search 'HLS vs DASH comparison 2024'",
+        "url": "https://www.google.com/search?q=HLS%20vs%20DASH%20comparison%202024"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Apple \u2014 HTTP Live Streaming",
+        "where_text": "Read manifests and adaptive bitrate basics. Explain segment duration, startup delay and buffering; compare DASH separately if needed.",
+        "url": "https://developer.apple.com/streaming/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_40_0_0",
+      "id": 1273,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego payment system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego payment system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_40_0_1",
+      "id": 1274,
+      "before": {
+        "type": "Blog",
+        "item": "Stripe Engineering \u2013 'Idempotency and exactly-once delivery'",
+        "where_text": "stripe.com/blog \u2192 search 'idempotency'",
+        "url": "https://stripe.com/blog"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Stripe \u2014 Designing robust APIs with idempotency",
+        "where_text": "Distinguish retry-safe operations from exactly-once delivery. Test duplicate requests, unknown outcomes after timeouts, and reconciliation.",
+        "url": "https://stripe.com/blog/idempotency"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_40_1_0",
+      "id": 1275,
+      "before": {
+        "where_text": "pp. 181\u2013198"
+      },
+      "after": {
+        "where_text": "Read the named chapter; paid book access may be required. Summarize the design assumptions and tradeoffs."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_40_1_1",
+      "id": 1276,
+      "before": {
+        "where_text": "YouTube \u2192 search 'gaurav sen notification service'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'gaurav sen notification service'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:7_41_0_1",
+      "id": 1279,
+      "before": {
+        "where_text": "YouTube \u2192 search 'system design interview URL shortener mock'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'system design interview URL shortener mock'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_42_1_1",
+      "id": 1287,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego resilience patterns'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego resilience patterns'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_43_0_0",
+      "id": 1290,
+      "before": {
+        "type": "Article",
+        "item": "Honeycomb \u2013 'Observability vs Monitoring: What's the Difference?'",
+        "where_text": "honeycomb.io/blog \u2014 search 'observability vs monitoring'",
+        "url": "https://honeycomb.io/blog"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "OpenTelemetry \u2014 observability primer",
+        "where_text": "Connect logs, metrics and traces to a debugging question; identify which signal would expose a slow downstream dependency.",
+        "url": "https://opentelemetry.io/docs/concepts/observability-primer/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_43_0_1",
+      "id": 1291,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego logging metrics tracing'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego logging metrics tracing'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_43_1_1",
+      "id": 1293,
+      "before": {
+        "where_text": "YouTube \u2192 search 'nana prometheus grafana tutorial'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'nana prometheus grafana tutorial'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_44_0_0",
+      "id": 1295,
+      "before": {
+        "where_text": "YouTube \u2192 search 'nana docker tutorial beginners'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'nana docker tutorial beginners'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_44_0_1",
+      "id": 1296,
+      "before": {
+        "where_text": "YouTube \u2192 search 'nana docker compose tutorial'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'nana docker compose tutorial'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_44_1_0",
+      "id": 1297,
+      "before": {
+        "where_text": "YouTube \u2192 search 'nana kubernetes tutorial beginners'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'nana kubernetes tutorial beginners'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_45_0_0",
+      "id": 1300,
+      "before": {
+        "where_text": "YouTube \u2192 search 'nana github actions ci cd'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'nana github actions ci cd'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:8_45_1_0",
+      "id": 1302,
+      "before": {
+        "where_text": "YouTube \u2192 search 'bytebytego blue green canary deployment'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'bytebytego blue green canary deployment'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:9_47_0_0",
+      "id": 1310,
+      "before": {
+        "item": "interviewing.io \u2013 schedule a free mock with an engineer",
+        "where_text": "interviewing.io \u2014 real feedback from FAANG engineers",
+        "url": "https://interviewing.io"
+      },
+      "after": {
+        "item": "Peer mock interview \u2014 schedule feedback with another engineer",
+        "where_text": "Use a peer or check the platform\u2019s current availability and pricing; do not assume a free professional mock is available.",
+        "url": "https://interviewing.io/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:9_48_1_0",
+      "id": 1317,
+      "before": {
+        "where_text": "Separation of concerns throughout.",
+        "mins": 60
+      },
+      "after": {
+        "where_text": "Budget several sessions. Start with a modular service; prove authentication and ownership checks with integration tests before adding distributed components.",
+        "mins": 360
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "python:9_48_2_0",
+      "id": 1318,
+      "before": {
+        "where_text": "HLD + LLD + observability all converge here.",
+        "mins": 60
+      },
+      "after": {
+        "where_text": "Test duplicate notification events, stale timeline entries and Redis/Kafka outages. Include a runnable local stack and one dashboard explaining a failure.",
+        "mins": 360
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:1_1_0_1",
+      "id": 1325,
+      "before": {
+        "type": "YouTube",
+        "item": "Coding with John \u2013 'Generics in Java'",
+        "where_text": "YouTube \u2192 search 'Coding with John Java generics'",
+        "mins": 22,
+        "url": "https://www.youtube.com/results?search_query=Coding%20with%20John%20Java%20generics"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "dev.java \u2014 Java foundations and generics",
+        "where_text": "Optional foundations bridge: setup, language basics, classes, interfaces, exceptions, then generics. Build a CLI inventory and test invalid input before starting the main track.",
+        "mins": 60,
+        "url": "https://dev.java/learn/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:1_1_1_1",
+      "id": 1327,
+      "before": {
+        "where_text": "baeldung.com/java-21-new-features"
+      },
+      "after": {
+        "where_text": "www.baeldung.com/java-lts-21-new-features"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:1_2_0_1",
+      "id": 1330,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Amigoscode Java functional programming'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Amigoscode Java functional programming'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:1_3_0_1",
+      "id": 1335,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Java Brains concurrency'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Java Brains concurrency'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:1_4_0_1",
+      "id": 1340,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Marco Codes CompletableFuture'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Marco Codes CompletableFuture'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:1_4_1_0",
+      "id": 1341,
+      "before": {
+        "item": "JEP 444 Virtual Threads \u2014 motivation, API, structured concurrency"
+      },
+      "after": {
+        "item": "JEP 444 Virtual Threads \u2014 motivation, API, and limitations (stable in Java 21)"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:1_4_2_0",
+      "id": 1343,
+      "before": {
+        "where_text": "Use Java 21 HttpClient. Ask Claude about structured concurrency!"
+      },
+      "after": {
+        "where_text": "Use Java 21 HttpClient; bound downstream concurrency and test timeouts/cancellation. StructuredTaskScope is a separate Java 21 preview topic (JEP 453), not required for this build."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:1_5_0_0",
+      "id": 1344,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Java Brains JVM internals'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Java Brains JVM internals'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_7_0_1",
+      "id": 1355,
+      "before": {
+        "where_text": "pp. 93\u2013135 \u2014 minimize accessibility, prefer composition over inheritance, Liskov in practice"
+      },
+      "after": {
+        "where_text": "minimize accessibility, prefer composition over inheritance, Liskov in practice"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_7_1_1",
+      "id": 1357,
+      "before": {
+        "where_text": "YouTube \u2192 search 'CodeAesthetic shouldn't nest code'",
+        "url": "https://www.youtube.com/results?search_query=CodeAesthetic%20shouldn",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'CodeAesthetic shouldn't nest code'",
+        "url": "https://www.youtube.com/results?search_query=CodeAesthetic%20shouldn%27t%20nest%20code",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_8_0_1",
+      "id": 1361,
+      "before": {
+        "where_text": "pp. 5\u201316 \u2014 why Java prefers static factories. Named constructors pattern."
+      },
+      "after": {
+        "where_text": "why Java prefers static factories. Named constructors pattern."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_8_1_0",
+      "id": 1362,
+      "before": {
+        "where_text": "pp. 11\u201324 \u2014 the definitive Java Builder pattern. Enum Singleton is thread-safe."
+      },
+      "after": {
+        "where_text": "the definitive Java Builder pattern. Enum Singleton is thread-safe."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_9_0_1",
+      "id": 1366,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Derek Banas adapter decorator Java'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Derek Banas adapter decorator Java'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_9_2_0",
+      "id": 1369,
+      "before": {
+        "where_text": "Test: kill one payment provider \u2014 facade falls back transparently. Ask Claude!"
+      },
+      "after": {
+        "where_text": "Test a provider timeout after a successful charge: preserve an unknown outcome, reconcile it, and prevent duplicate charges before attempting any fallback."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_10_0_1",
+      "id": 1371,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Derek Banas observer strategy Java'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Derek Banas observer strategy Java'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_10_2_0",
+      "id": 1374,
+      "before": {
+        "item": "Order state machine: State pattern (CREATED\u2192PAID\u2192SHIPPED\u2192DELIVERED\u2192CANCELLED), Observer notifies Email/SMS on each transition, Command for undo/redo support",
+        "where_text": "Java 21 sealed classes work beautifully for state enums. Ask Claude to review!"
+      },
+      "after": {
+        "item": "Order state machine: CREATED\u2192PAID\u2192SHIPPED\u2192DELIVERED, with cancellation only on permitted branches. Observer emits events; compensation handles external side effects.",
+        "where_text": "Choose an enum transition table or sealed state hierarchy. Test invalid transitions, duplicate events, and failed compensation; delivered orders require a return/refund flow."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_11_0_0",
+      "id": 1375,
+      "before": {
+        "where_text": "YouTube \u2014 watch one walkthrough for approach ideas",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2014 watch one walkthrough for approach ideas",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_11_1_1",
+      "id": 1378,
+      "before": {
+        "where_text": "Full type hints & interfaces. Ask Claude to review for missed edge cases!"
+      },
+      "after": {
+        "where_text": "Use Java interfaces and explicit domain types. Test duplicate reservations, overdue returns, and concurrent loans."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_12_1_0",
+      "id": 1381,
+      "before": {
+        "type": "Blog",
+        "item": "Gergely Orosz \u2013 'How to Write a Good Design Document'",
+        "where_text": "blog.pragmaticengineer.com or search 'Gergely Orosz design document'",
+        "url": "https://blog.pragmaticengineer.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Google Engineering Practices \u2014 design review",
+        "where_text": "Review overall design, complexity, tests and documentation. Write requirements, alternatives, failure cases and tradeoffs in your design note.",
+        "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_12_1_1",
+      "id": 1382,
+      "before": {
+        "type": "Article",
+        "item": "Google Design Doc format \u2014 one-pager template",
+        "where_text": "Search 'Google design doc template one-pager'",
+        "url": "https://www.google.com/search?q=Google%20design%20doc%20template%20one-pager"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Architecture decision records \u2014 rationale and template",
+        "where_text": "Record context, decision, alternatives and consequences; use a short ADR for one significant design choice.",
+        "url": "https://adr.github.io/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:2_12_2_0",
+      "id": 1383,
+      "before": {
+        "where_text": "4 docs total. This is what you show in interviews."
+      },
+      "after": {
+        "where_text": "Three docs: Parking Lot, Library, and ATM. Include rejected alternatives and failure cases."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_13_0_1",
+      "id": 1386,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Amigoscode Spring Boot 3 tutorial'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Amigoscode Spring Boot 3 tutorial'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_13_1_0",
+      "id": 1387,
+      "before": {
+        "item": "Spring Boot \u2013 'Auto-configuration' & 'Externalized Configuration'",
+        "where_text": "docs.spring.io/spring-boot/reference/features/developing-auto-configuration.html",
+        "url": "https://docs.spring.io/spring-boot/reference/features/developing-auto-configuration.html"
+      },
+      "after": {
+        "item": "Spring Boot 3.5 \u2014 auto-configuration",
+        "where_text": "Use the Spring Boot 3.5 documentation with this track. Inspect the condition evaluation report and explain when a user bean overrides a default.",
+        "url": "https://docs.spring.io/spring-boot/3.5/reference/using/auto-configuration.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_13_1_1",
+      "id": 1388,
+      "before": {
+        "type": "Article",
+        "item": "Baeldung \u2013 'Spring Boot Auto-Configuration'",
+        "where_text": "baeldung.com/spring-boot-auto-configuration",
+        "url": "https://www.baeldung.com/spring-boot-custom-auto-configuration"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Spring Boot 3.5 \u2014 externalized configuration",
+        "where_text": "Trace property-source precedence; use profiles and validated configuration properties without embedding secrets.",
+        "url": "https://docs.spring.io/spring-boot/3.5/reference/features/external-config.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_14_2_0",
+      "id": 1394,
+      "before": {
+        "item": "CRUD REST API: Bean Validation on DTOs, @ControllerAdvice with RFC 7807 Problem JSON, Springdoc UI, pagination with Pageable"
+      },
+      "after": {
+        "item": "CRUD REST API: Bean Validation on DTOs, @ControllerAdvice with RFC 9457 Problem JSON, Springdoc UI, pagination with Pageable"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_15_0_1",
+      "id": 1396,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Amigoscode Spring Data JPA'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Amigoscode Spring Data JPA'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_16_0_1",
+      "id": 1401,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Amigoscode Spring Security 6 JWT'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Amigoscode Spring Security 6 JWT'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_16_1_1",
+      "id": 1403,
+      "before": {
+        "type": "Article",
+        "item": "Baeldung \u2013 'Spring Security @PreAuthorize and @PostAuthorize'",
+        "where_text": "baeldung.com/spring-security-preauthorize",
+        "url": "https://www.baeldung.com/spring-security-method-security"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Spring Security 6.5 \u2014 method security",
+        "where_text": "Enable method security, test ownership as well as roles, and distinguish authentication failures from authorization failures.",
+        "url": "https://docs.spring.io/spring-security/reference/6.5/servlet/authorization/method-security.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_17_0_0",
+      "id": 1405,
+      "before": {
+        "where_text": "junit.org/junit5/docs/current/user-guide/",
+        "url": "https://junit.org/junit5/docs/current/user-guide/"
+      },
+      "after": {
+        "where_text": "docs.junit.org/5.13.4/user-guide/",
+        "url": "https://docs.junit.org/5.13.4/user-guide/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_17_0_1",
+      "id": 1406,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Amigoscode Spring Boot testing Mockito'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Amigoscode Spring Boot testing Mockito'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_17_1_0",
+      "id": 1407,
+      "before": {
+        "where_text": "java.testcontainers.org/frameworks/spring_boot/",
+        "url": "https://docs.spring.io/spring-boot/reference/testing/testcontainers.html"
+      },
+      "after": {
+        "where_text": "docs.spring.io/spring-boot/3.5/reference/testing/testcontainers.html",
+        "url": "https://docs.spring.io/spring-boot/3.5/reference/testing/testcontainers.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_18_0_1",
+      "id": 1411,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Daily Code Buffer Maven tutorial'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Daily Code Buffer Maven tutorial'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:3_18_1_0",
+      "id": 1412,
+      "before": {
+        "where_text": "docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven",
+        "url": "https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven"
+      },
+      "after": {
+        "where_text": "docs.github.com/en/actions/tutorials/build-and-test-code/java-with-maven",
+        "url": "https://docs.github.com/en/actions/tutorials/build-and-test-code/java-with-maven"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_20_1_0",
+      "id": 1422,
+      "before": {
+        "type": "Article",
+        "item": "Baeldung \u2013 'Hibernate @BatchSize'",
+        "where_text": "baeldung.com/hibernate-batchsize",
+        "url": "https://www.baeldung.com/jpa-hibernate-batch-insert-update"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Hibernate 6.6 \u2014 BatchSize API",
+        "where_text": "Batch fetching initializes several proxies/collections together. Distinguish it from JDBC insert/update batching.",
+        "url": "https://docs.jboss.org/hibernate/orm/6.6/javadocs/org/hibernate/annotations/BatchSize.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_20_1_1",
+      "id": 1423,
+      "before": {
+        "type": "Article",
+        "item": "Baeldung \u2013 'Spring Data JPA Bulk Insert'",
+        "where_text": "baeldung.com/spring-data-jpa-bulk-insert",
+        "url": "https://www.baeldung.com/spring-data-jpa-batch-inserts"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Hibernate 6.6 \u2014 JDBC batching",
+        "where_text": "Read JDBC batching and flush/clear behavior; measure round trips and note identifier-generation limitations.",
+        "url": "https://docs.jboss.org/hibernate/orm/6.6/userguide/html_single/Hibernate_User_Guide.html#batch"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_21_0_0",
+      "id": 1425,
+      "before": {
+        "item": "DDIA \u2013 Ch 2 'Data Models and Query Languages'",
+        "where_text": "pp. 31\u201363 \u2014 document, relational, graph models compared. Required reading."
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 Ch 2 'Data Models and Query Languages'",
+        "where_text": "document, relational, graph models compared. Required reading."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_21_0_1",
+      "id": 1426,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Fireship sql nosql'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Fireship sql nosql'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_21_1_0",
+      "id": 1427,
+      "before": {
+        "where_text": "university.redis.com \u2014 Strings, Lists, Sets, Sorted Sets, Hashes",
+        "url": "https://university.redis.com"
+      },
+      "after": {
+        "where_text": "university.redis.io \u2014 Strings, Lists, Sets, Sorted Sets, Hashes",
+        "url": "https://university.redis.io"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_21_2_0",
+      "id": 1429,
+      "before": {
+        "item": "Gaming leaderboard: ZADD/ZRANGE/ZRANK for scores, SETNX for distributed lock, TTL-based session store. Spring Data Redis with Spring Boot."
+      },
+      "after": {
+        "item": "Gaming leaderboard: ZADD/ZRANGE/ZRANK for scores and a TTL-based session store. Explore a single-instance lease with SET NX PX and ownership-checked release; document failover limits."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_22_0_0",
+      "id": 1430,
+      "before": {
+        "where_text": "flywaydb.org/documentation/ \u2014 the go-to DB migration tool for Java",
+        "url": "https://flywaydb.org/documentation/"
+      },
+      "after": {
+        "where_text": "documentation.red-gate.com/fd \u2014 the go-to DB migration tool for Java",
+        "url": "https://documentation.red-gate.com/fd"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_23_0_0",
+      "id": 1435,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Confluent Kafka in 5 minutes'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Confluent Kafka in 5 minutes'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_23_1_0",
+      "id": 1437,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Hussein Nasser Kafka internals'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Hussein Nasser Kafka internals'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_24_0_1",
+      "id": 1441,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo REST GraphQL gRPC'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo REST GraphQL gRPC'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:4_24_1_1",
+      "id": 1443,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Amigoscode gRPC Java'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Amigoscode gRPC Java'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_25_0_0",
+      "id": 1445,
+      "before": {
+        "item": "DDIA Ch 1 'Reliable, Scalable, and Maintainable Applications'",
+        "where_text": "pp. 1\u201329 \u2014 your compass for everything that follows"
+      },
+      "after": {
+        "item": "DDIA 1e Ch 1 'Reliable, Scalable, and Maintainable Applications'",
+        "where_text": "your compass for everything that follows"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_25_0_1",
+      "id": 1446,
+      "before": {
+        "item": "DDIA Ch 2 'Data Models and Query Languages'",
+        "where_text": "pp. 30\u201377 \u2014 relational vs document vs graph"
+      },
+      "after": {
+        "item": "DDIA 1e Ch 2 'Data Models and Query Languages'",
+        "where_text": "relational vs document vs graph"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_25_1_0",
+      "id": 1447,
+      "before": {
+        "item": "DDIA Ch 3 'Storage and Retrieval' \u2014 B-Trees vs LSM-Trees, SSTables",
+        "where_text": "pp. 70\u2013100 \u2014 understand InnoDB (B-Tree) vs RocksDB/Cassandra (LSM) internals"
+      },
+      "after": {
+        "item": "DDIA 1e Ch 3 'Storage and Retrieval' \u2014 B-Trees vs LSM-Trees, SSTables",
+        "where_text": "understand InnoDB (B-Tree) vs RocksDB/Cassandra (LSM) internals"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_25_1_1",
+      "id": 1448,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Hussein Nasser B-Tree LSM'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Hussein Nasser B-Tree LSM'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_26_0_0",
+      "id": 1450,
+      "before": {
+        "item": "DDIA Ch 5 'Replication' \u2014 leader-follower, multi-leader, leaderless replication",
+        "where_text": "pp. 151\u2013195 \u2014 read repair, quorums, eventual consistency"
+      },
+      "after": {
+        "item": "DDIA 1e Ch 5 'Replication' \u2014 leader-follower, multi-leader, leaderless replication",
+        "where_text": "read repair, quorums, eventual consistency"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_26_1_0",
+      "id": 1451,
+      "before": {
+        "item": "DDIA Ch 6 'Partitioning' \u2014 hash vs range, consistent hashing, secondary indexes",
+        "where_text": "pp. 199\u2013241 \u2014 hotspot mitigation, skewed workloads"
+      },
+      "after": {
+        "item": "DDIA 1e Ch 6 'Partitioning' \u2014 hash vs range, consistent hashing, secondary indexes",
+        "where_text": "hotspot mitigation, skewed workloads"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_26_1_1",
+      "id": 1452,
+      "before": {
+        "item": "DDIA Ch 7 'Transactions' \u2014 ACID, isolation levels, serializability",
+        "where_text": "pp. 222\u2013271 \u2014 clearest explanation of Read Committed vs Serializable you'll find"
+      },
+      "after": {
+        "item": "DDIA 1e Ch 7 'Transactions' \u2014 ACID, isolation levels, serializability",
+        "where_text": "clearest explanation of Read Committed vs Serializable you'll find"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_27_0_0",
+      "id": 1454,
+      "before": {
+        "item": "DDIA Ch 8 'The Trouble with Distributed Systems'",
+        "where_text": "pp. 273\u2013320 \u2014 clocks, networks, partial failures. Fundamental mental model."
+      },
+      "after": {
+        "item": "DDIA 1e Ch 8 'The Trouble with Distributed Systems'",
+        "where_text": "clocks, networks, partial failures. Fundamental mental model."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_27_0_1",
+      "id": 1455,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Martin Kleppmann CAP theorem'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Martin Kleppmann CAP theorem'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_27_1_0",
+      "id": 1456,
+      "before": {
+        "item": "DDIA Ch 9 'Consistency and Consensus'",
+        "where_text": "pp. 321\u2013370 \u2014 linearizability, Raft algorithm, 2PC vs Paxos"
+      },
+      "after": {
+        "item": "DDIA 1e Ch 9 'Consistency and Consensus'",
+        "where_text": "linearizability, Raft algorithm, 2PC vs Paxos"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_27_1_1",
+      "id": 1457,
+      "before": {
+        "type": "Article",
+        "item": "Aphyr \u2013 'Please stop calling databases CP or AP'",
+        "where_text": "Search: 'aphyr please stop calling databases CP AP'",
+        "url": "https://www.google.com/search?q=aphyr%20please%20stop%20calling%20databases%20CP%20AP"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Martin Kleppmann \u2014 Please stop calling databases CP or AP",
+        "where_text": "Read the author\u2019s argument: qualify consistency and availability by operation and failure assumptions rather than labeling an entire database.",
+        "url": "https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_28_0_0",
+      "id": 1459,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo caching strategies'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo caching strategies'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_28_1_0",
+      "id": 1461,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Hussein Nasser cache invalidation'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Hussein Nasser cache invalidation'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_28_1_1",
+      "id": 1462,
+      "before": {
+        "item": "Ask Claude: thundering herd on cache miss for a product page with 1M concurrent users \u2014 how do you use Redis SETNX + TTL to prevent it?"
+      },
+      "after": {
+        "item": "Ask Claude: thundering herd on cache miss for a product page with 1M concurrent users \u2014 how do you use an atomic Redis SET NX PX lease plus ownership-checked release to reduce it?"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_29_0_0",
+      "id": 1464,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo load balancing algorithms'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo load balancing algorithms'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_29_1_0",
+      "id": 1466,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo CDN explained'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo CDN explained'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_30_0_0",
+      "id": 1469,
+      "before": {
+        "where_text": "pp. 19\u201328 \u2014 memorise these latency numbers. Interviewers expect them."
+      },
+      "after": {
+        "where_text": "memorise these latency numbers. Interviewers expect them."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_30_0_1",
+      "id": 1470,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo system design framework'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo system design framework'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:5_30_1_0",
+      "id": 1471,
+      "before": {
+        "where_text": "pp. 1\u201322 \u2014 the canonical scale-up story. Every interviewer knows it."
+      },
+      "after": {
+        "where_text": "the canonical scale-up story. Every interviewer knows it."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_31_0_1",
+      "id": 1476,
+      "before": {
+        "where_text": "pp. 143\u2013162 \u2014 read AFTER your own attempt. Compare approaches."
+      },
+      "after": {
+        "where_text": "read AFTER your own attempt. Compare approaches."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_32_0_0",
+      "id": 1479,
+      "before": {
+        "where_text": "pp. 199\u2013213 \u2014 fanout on write vs fanout on read. Celebrity problem."
+      },
+      "after": {
+        "where_text": "fanout on write vs fanout on read. Celebrity problem."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_32_0_1",
+      "id": 1480,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Gaurav Sen news feed design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Gaurav Sen news feed design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_32_1_0",
+      "id": 1481,
+      "before": {
+        "type": "Blog",
+        "item": "Instagram Engineering \u2013 'Scaling Instagram'",
+        "where_text": "instagram-engineering.com \u2014 search 'scaling'",
+        "url": "https://instagram-engineering.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Meta Engineering \u2014 How Threads infrastructure was built",
+        "where_text": "A historical production case study. Compare its constraints with your own feed design rather than copying its architecture.",
+        "url": "https://engineering.fb.com/2023/12/19/core-infra/how-meta-built-the-infrastructure-for-threads/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_32_1_1",
+      "id": 1482,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo design Twitter'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo design Twitter'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_33_0_0",
+      "id": 1484,
+      "before": {
+        "where_text": "pp. 215\u2013240 \u2014 WebSocket connections, message storage, presence, group chat"
+      },
+      "after": {
+        "where_text": "WebSocket connections, message storage, presence, group chat"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_33_0_1",
+      "id": 1485,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo WhatsApp system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo WhatsApp system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_33_1_0",
+      "id": 1486,
+      "before": {
+        "type": "Blog",
+        "item": "High Scalability \u2013 'WhatsApp Architecture' summary",
+        "where_text": "highscalability.com \u2014 search 'whatsapp'",
+        "url": "https://highscalability.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Slack Engineering \u2014 real-time messaging",
+        "where_text": "Study persistent connections and routing; explain reconnect, delivery and fanout behavior in your own design.",
+        "url": "https://slack.engineering/real-time-messaging/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_33_1_1",
+      "id": 1487,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Gaurav Sen messenger system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Gaurav Sen messenger system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_34_0_0",
+      "id": 1489,
+      "before": {
+        "where_text": "pp. 81\u2013101 \u2014 virtual nodes, hotspot mitigation. Critical HLD building block."
+      },
+      "after": {
+        "where_text": "virtual nodes, hotspot mitigation. Critical HLD building block."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_34_0_1",
+      "id": 1490,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo consistent hashing'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo consistent hashing'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_34_1_0",
+      "id": 1491,
+      "before": {
+        "where_text": "pp. 103\u2013130 \u2014 vector clocks, gossip protocol, Merkle trees"
+      },
+      "after": {
+        "where_text": "vector clocks, gossip protocol, Merkle trees"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_34_1_1",
+      "id": 1492,
+      "before": {
+        "type": "Article",
+        "item": "AWS DynamoDB architecture blog",
+        "where_text": "aws.amazon.com/blogs \u2192 search 'DynamoDB architecture'",
+        "url": "https://aws.amazon.com/blogs"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Amazon Dynamo paper \u2014 distributed key-value storage",
+        "where_text": "Original Dynamo design; distinguish this paper from the managed DynamoDB service. Compare partitioning, replication, conflicts and failure assumptions.",
+        "url": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_34_2_0",
+      "id": 1493,
+      "before": {
+        "where_text": "Write a 1-page doc: consistent hashing vs random partitioning trade-offs.",
+        "mins": 75
+      },
+      "after": {
+        "where_text": "Compare your ring with the original Dynamo paper. Do not assume modern DynamoDB exposes the same partitioning or conflict-resolution design.",
+        "mins": 180
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_35_0_0",
+      "id": 1494,
+      "before": {
+        "where_text": "pp. 241\u2013260 \u2014 trie vs DB, aggregation pipeline, caching hot queries"
+      },
+      "after": {
+        "where_text": "trie vs DB, aggregation pipeline, caching hot queries"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_35_0_1",
+      "id": 1495,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Gaurav Sen typeahead suggestion'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Gaurav Sen typeahead suggestion'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_35_1_0",
+      "id": 1496,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo google search'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo google search'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_35_1_1",
+      "id": 1497,
+      "before": {
+        "type": "Book",
+        "item": "System Design Interview Vol 2 \u2013 'Design Google Search' (web crawler + inverted index sections)",
+        "where_text": "Focus on the crawl frontier and index building",
+        "url": "https://bytebytego.com/courses/system-design-interview/foreword"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Stanford \u2014 Introduction to Information Retrieval",
+        "where_text": "Free textbook: start with Boolean retrieval and inverted indexes; use the web crawling chapter for crawl-frontier and politeness design.",
+        "url": "https://nlp.stanford.edu/IR-book/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_36_0_0",
+      "id": 1499,
+      "before": {
+        "type": "Book",
+        "item": "System Design Interview Vol 2 \u2013 'Design YouTube'",
+        "where_text": "pp. 179\u2013209 \u2014 upload, async transcoding pipeline, streaming, CDN distribution",
+        "url": "https://bytebytego.com/courses/system-design-interview/foreword"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Netflix Open Connect \u2014 CDN architecture",
+        "where_text": "Study content placement and delivery. Design upload/transcoding separately; do not assume the CDN handles the whole video pipeline.",
+        "url": "https://openconnect.netflix.com/en/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_36_0_1",
+      "id": 1500,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo Netflix system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo Netflix system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_36_1_0",
+      "id": 1501,
+      "before": {
+        "type": "Blog",
+        "item": "Netflix Tech Blog \u2013 video encoding/transcoding pipeline",
+        "where_text": "netflixtechblog.com \u2014 search 'encoding' or 'video pipeline'",
+        "url": "https://netflixtechblog.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Netflix Open Connect \u2014 deployment and delivery",
+        "where_text": "Compare embedded and peering delivery; identify origin, cache and network failure modes.",
+        "url": "https://openconnect.netflix.com/en/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_36_1_1",
+      "id": 1502,
+      "before": {
+        "type": "Article",
+        "item": "HLS vs DASH adaptive streaming protocols",
+        "where_text": "Search 'HLS vs DASH comparison 2024'",
+        "url": "https://www.google.com/search?q=HLS%20vs%20DASH%20comparison%202024"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Apple \u2014 HTTP Live Streaming",
+        "where_text": "Read manifests and adaptive bitrate basics. Explain segment duration, startup delay and buffering; compare DASH separately if needed.",
+        "url": "https://developer.apple.com/streaming/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_37_0_0",
+      "id": 1504,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo Uber system design'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo Uber system design'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_37_0_1",
+      "id": 1505,
+      "before": {
+        "type": "Blog",
+        "item": "Uber Engineering Blog \u2013 'Domain-Oriented Microservices'",
+        "where_text": "eng.uber.com \u2014 search 'domain-oriented microservices'",
+        "url": "https://eng.uber.com"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Uber \u2014 Domain-Oriented Microservice Architecture",
+        "where_text": "Study service boundaries and dependencies; identify when a modular monolith is simpler for your project.",
+        "url": "https://www.uber.com/us/en/blog/microservice-architecture/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_37_1_0",
+      "id": 1506,
+      "before": {
+        "type": "Blog",
+        "item": "Stripe Engineering \u2013 'Idempotency and exactly-once delivery'",
+        "where_text": "stripe.com/blog \u2192 search 'idempotency'",
+        "url": "https://stripe.com/blog"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Stripe \u2014 Designing robust APIs with idempotency",
+        "where_text": "Distinguish retry-safe operations from exactly-once delivery. Test duplicate requests, unknown outcomes after timeouts, and reconciliation.",
+        "url": "https://stripe.com/blog/idempotency"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_37_1_1",
+      "id": 1507,
+      "before": {
+        "where_text": "pp. 181\u2013198 \u2014 push, SMS, email at scale, rate limiting"
+      },
+      "after": {
+        "where_text": "push, SMS, email at scale, rate limiting"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:6_38_0_1",
+      "id": 1510,
+      "before": {
+        "where_text": "YouTube \u2192 search 'system design interview URL shortener mock'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'system design interview URL shortener mock'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_39_0_1",
+      "id": 1516,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Amigoscode Docker tutorial'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Amigoscode Docker tutorial'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_39_1_1",
+      "id": 1518,
+      "before": {
+        "type": "Article",
+        "item": "Baeldung \u2013 'Docker Compose with Spring Boot'",
+        "where_text": "baeldung.com/spring-boot-docker-compose",
+        "url": "https://www.baeldung.com/docker-compose-support-spring-boot"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Spring Boot 3.5 \u2014 Docker Compose development services",
+        "where_text": "Development-time Compose service connections are distinct from building and deploying the application container.",
+        "url": "https://docs.spring.io/spring-boot/3.5/reference/features/dev-services.html#features.dev-services.docker-compose"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_39_2_0",
+      "id": 1519,
+      "before": {
+        "item": "Multi-stage Dockerfile (Maven build \u2192 JRE runtime), target < 200 MB image, Docker Compose: app + postgres + redis + kafka + zookeeper, .dockerignore"
+      },
+      "after": {
+        "item": "Multi-stage Dockerfile (Maven build \u2192 JRE runtime), target < 200 MB image, Docker Compose: app + postgres + redis + kafka (KRaft mode), .dockerignore"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_40_0_1",
+      "id": 1521,
+      "before": {
+        "where_text": "YouTube \u2192 search 'TechWorld Nana Kubernetes tutorial'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'TechWorld Nana Kubernetes tutorial'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_40_1_1",
+      "id": 1523,
+      "before": {
+        "type": "Article",
+        "item": "Baeldung \u2013 'Deploying Spring Boot to Kubernetes'",
+        "where_text": "baeldung.com/spring-boot-kubernetes",
+        "url": "https://www.baeldung.com/spring-boot-minikube"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Kubernetes \u2014 Hello Minikube",
+        "where_text": "Deploy locally first; verify readiness, rolling updates, and service access before packaging the resources as a Helm chart.",
+        "url": "https://kubernetes.io/docs/tutorials/hello-minikube/"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_41_0_0",
+      "id": 1525,
+      "before": {
+        "where_text": "docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven",
+        "url": "https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven"
+      },
+      "after": {
+        "where_text": "docs.github.com/en/actions/tutorials/build-and-test-code/java-with-maven",
+        "url": "https://docs.github.com/en/actions/tutorials/build-and-test-code/java-with-maven"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_41_0_1",
+      "id": 1526,
+      "before": {
+        "where_text": "YouTube \u2192 search 'TechWorld Nana GitHub Actions'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'TechWorld Nana GitHub Actions'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_41_1_0",
+      "id": 1527,
+      "before": {
+        "where_text": "docs.sonarsource.com/sonarqube/latest/analysis/languages/java/",
+        "url": "https://docs.sonarsource.com/sonarqube/latest/analysis/languages/java/"
+      },
+      "after": {
+        "where_text": "docs.sonarsource.com/sonarqube-server/analyzing-source-code/languages/java",
+        "url": "https://docs.sonarsource.com/sonarqube-server/analyzing-source-code/languages/java"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_42_0_0",
+      "id": 1530,
+      "before": {
+        "where_text": "micrometer.io/docs/observation"
+      },
+      "after": {
+        "where_text": "docs.micrometer.io/micrometer/reference/observation.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_42_1_0",
+      "id": 1532,
+      "before": {
+        "where_text": "YouTube \u2192 search 'TechWorld Nana Prometheus Grafana'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'TechWorld Nana Prometheus Grafana'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_42_1_1",
+      "id": 1533,
+      "before": {
+        "where_text": "micrometer.io/docs/tracing"
+      },
+      "after": {
+        "where_text": "docs.micrometer.io/tracing/reference/index.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_43_0_1",
+      "id": 1536,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Amigoscode AWS Spring Boot'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Amigoscode AWS Spring Boot'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_43_1_1",
+      "id": 1538,
+      "before": {
+        "type": "Article",
+        "item": "Baeldung \u2013 'Spring Cloud AWS'",
+        "where_text": "baeldung.com/spring-cloud-aws",
+        "url": "https://www.baeldung.com/spring-cloud-aws-s3"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "AWS SDK for Java 2.x \u2014 S3 examples",
+        "where_text": "Use the SDK v2 examples; test uploads locally and explain IAM permissions, retry limits, and stream cleanup.",
+        "url": "https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/examples-s3.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_43_2_0",
+      "id": 1539,
+      "before": {
+        "where_text": "Use @LocalStackContainer in Testcontainers. Ask Claude about IAM least-privilege!"
+      },
+      "after": {
+        "where_text": "Use LocalStackContainer with @Container in Testcontainers. Ask Claude about IAM least-privilege!"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:7_44_0_0",
+      "id": 1540,
+      "before": {
+        "where_text": "YouTube \u2192 search 'TechWorld Nana Terraform tutorial'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'TechWorld Nana Terraform tutorial'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_45_0_0",
+      "id": 1545,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo microservices architecture'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo microservices architecture'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_45_1_1",
+      "id": 1548,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Hussein Nasser microservices communication'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Hussein Nasser microservices communication'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_46_0_1",
+      "id": 1551,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Daily Code Buffer Spring Cloud Gateway'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Daily Code Buffer Spring Cloud Gateway'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_47_0_1",
+      "id": 1556,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Daily Code Buffer Resilience4j Spring Boot'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Daily Code Buffer Resilience4j Spring Boot'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_47_2_0",
+      "id": 1559,
+      "before": {
+        "where_text": "Verify state machine transitions in tests. Ask Claude to review the config!",
+        "mins": 90
+      },
+      "after": {
+        "where_text": "Use bounded retries with jitter only for idempotent operations. Never return stale success for a payment or stock reservation; test unknown outcomes and reconciliation.",
+        "mins": 240
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_48_0_1",
+      "id": 1561,
+      "before": {
+        "where_text": "micrometer.io/docs/tracing"
+      },
+      "after": {
+        "where_text": "docs.micrometer.io/tracing/reference/index.html"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_48_1_0",
+      "id": 1562,
+      "before": {
+        "type": "Article",
+        "item": "Baeldung \u2013 'Structured Logging with Logstash Logback Encoder'",
+        "where_text": "baeldung.com/logback",
+        "url": "https://baeldung.com/logback"
+      },
+      "after": {
+        "type": "Docs",
+        "item": "Spring Boot 3.5 \u2014 structured logging",
+        "where_text": "Enable structured JSON logging, correlate traces, and redact credentials and personal data.",
+        "url": "https://docs.spring.io/spring-boot/3.5/reference/features/logging.html#features.logging.structured"
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_48_1_1",
+      "id": 1563,
+      "before": {
+        "where_text": "YouTube \u2192 search 'TechWorld Nana ELK stack'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'TechWorld Nana ELK stack'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_49_0_1",
+      "id": 1566,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Hussein Nasser CQRS event sourcing'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Hussein Nasser CQRS event sourcing'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_50_0_0",
+      "id": 1570,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo distributed transactions'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo distributed transactions'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:8_50_1_0",
+      "id": 1572,
+      "before": {
+        "where_text": "YouTube \u2192 search 'Hussein Nasser saga orchestration choreography'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'Hussein Nasser saga orchestration choreography'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:9_51_0_1",
+      "id": 1576,
+      "before": {
+        "where_text": "YouTube \u2192 search 'ByteByteGo system design interview'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'ByteByteGo system design interview'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:9_52_0_1",
+      "id": 1581,
+      "before": {
+        "where_text": "YouTube \u2192 search 'NeetCode coding interview patterns'",
+        "is_core": true
+      },
+      "after": {
+        "where_text": "Optional video discovery (search results, not a verified video): YouTube \u2192 search 'NeetCode coding interview patterns'",
+        "is_core": false
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:9_52_1_1",
+      "id": 1583,
+      "before": {
+        "where_text": "Common senior Java interview question"
+      },
+      "after": {
+        "where_text": "In access-order LinkedHashMap, get() changes the order and needs exclusive synchronization. Test concurrent get/put/eviction and compare a single lock with a specialized cache."
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:9_53_1_0",
+      "id": 1587,
+      "before": {
+        "where_text": "Commit each service separately. Ask Claude to review each PR!",
+        "mins": 180
+      },
+      "after": {
+        "where_text": "Budget multiple sessions (roughly 20\u201340 hours). Reuse earlier services; demonstrate checkout, duplicate events, payment timeouts and compensation, with a reproducible local setup.",
+        "mins": 1200
+      }
+    },
+    {
+      "table": "roadmap_resources",
+      "key": "java:9_54_0_0",
+      "id": 1588,
+      "before": {
+        "item": "DDIA \u2013 re-read Ch 8 'The Trouble with Distributed Systems' + Ch 9 'Consistency and Consensus'",
+        "where_text": "pp. 274\u2013338 \u2014 hardest chapters. Everything clicks on second read."
+      },
+      "after": {
+        "item": "DDIA 1e \u2013 re-read Ch 8 'The Trouble with Distributed Systems' + Ch 9 'Consistency and Consensus'",
+        "where_text": "hardest chapters. Everything clicks on second read."
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "python:1_1_2_0",
+      "id": 1,
+      "before": {
+        "requirements": [
+          "Accept two CLI arguments: the value (float) and the source unit (C, F, or K)",
+          "Convert to all other two units and print results clearly formatted",
+          "Raise a custom TempConversionError for temperatures below absolute zero (\u2212273.15 \u00b0C / \u2212459.67 \u00b0F / 0 K)",
+          "Handle non-numeric input with a helpful error message (not a raw traceback)",
+          "Bonus: word frequency counter \u2014 read any text file and print the top-10 most frequent words"
+        ],
+        "acceptance": [
+          "`python converter.py 100 C` prints: 100.0\u00b0C = 212.0\u00b0F = 373.15 K",
+          "`python converter.py -500 C` prints: Error: \u2212500\u00b0C is below absolute zero",
+          "`python converter.py abc F` prints: Error: 'abc' is not a valid number",
+          "Word counter reads the file in one pass, uses collections.Counter, prints formatted table"
+        ]
+      },
+      "after": {
+        "requirements": [
+          "Accept two CLI arguments: the value (float) and the source unit (C, F, or K)",
+          "Convert to all other two units and print results clearly formatted",
+          "Reject temperatures below absolute zero (\u2212273.15 \u00b0C / \u2212459.67 \u00b0F / 0 K); a custom exception is optional after week 3",
+          "Handle non-numeric input with a helpful error message (not a raw traceback)",
+          "Bonus: word frequency counter \u2014 read any text file and print the top-10 most frequent words"
+        ],
+        "acceptance": [
+          "`python converter.py 100 C` prints: 100.0\u00b0C = 212.0\u00b0F = 373.15 K",
+          "`python converter.py -500 C` prints: Error: \u2212500\u00b0C is below absolute zero",
+          "`python converter.py abc F` prints: Error: 'abc' is not a valid number",
+          "Optional word-counter extension reads a file once and prints the top ten counts; finish the converter first"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "python:1_2_2_0",
+      "id": 2,
+      "before": {
+        "requirements": [
+          "models.py: Task dataclass with id (uuid), title (str), done (bool), created_at (datetime)",
+          "storage.py: load() reads tasks from todos.json; save(tasks) writes back; create the file if it doesn't exist",
+          "cli.py: argparse sub-commands \u2014 add <title>, list (shows all), done <id>, delete <id>",
+          "IDs can be the first 8 characters of the UUID \u2014 short enough to type",
+          "list command shows done tasks with a \u2713 prefix and undone with \u25cb"
+        ],
+        "hints": [
+          "Use `dataclasses.asdict(task)` to serialise a Task to JSON",
+          "Use `datetime.fromisoformat()` to deserialise the created_at field",
+          "Use `uuid.uuid4()` to generate IDs, then `str(uid)[:8]` for the short form",
+          "Add `if __name__ == '__main__': main()` in cli.py"
+        ]
+      },
+      "after": {
+        "requirements": [
+          "models.py: start with task dictionaries containing id, title, done and an ISO-format created_at string; refactor to a Task dataclass after week 5",
+          "storage.py: load() reads tasks from todos.json; save(tasks) writes back; create the file if it doesn't exist",
+          "cli.py: argparse sub-commands \u2014 add <title>, list (shows all), done <id>, delete <id>",
+          "IDs can be the first 8 characters of the UUID \u2014 short enough to type",
+          "list command shows done tasks with a \u2713 prefix and undone with \u25cb"
+        ],
+        "hints": [
+          "Save dictionaries as JSON initially; after the dataclass refactor use asdict and convert datetime values with isoformat() explicitly",
+          "Use `datetime.fromisoformat()` to deserialise the created_at field",
+          "Use `uuid.uuid4()` to generate IDs, then `str(uid)[:8]` for the short form",
+          "Add `if __name__ == '__main__': main()` in cli.py"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "python:2_5_2_0",
+      "id": 5,
+      "before": {
+        "references": [
+          {
+            "url": "https://www.fluentpython.com/",
+            "label": "Fluent Python \u2014 A Pythonic Object"
+          }
+        ]
+      },
+      "after": {
+        "references": [
+          {
+            "label": "Fluent Python \u2014 Interfaces, Protocols, and ABCs",
+            "url": "https://www.fluentpython.com/"
+          }
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "python:2_8_2_0",
+      "id": 8,
+      "before": {
+        "overview": "Build an async web scraper that fetches 10 URLs concurrently using asyncio and aiohttp. Define typed Protocol interfaces for the scraper and storage components. Benchmark against the synchronous version to see the 10\u00d7 speedup in action.",
+        "requirements": [
+          "ScraperProtocol: `async def fetch(url: str) \u2192 str`; AiohttpScraper implements it",
+          "StorageProtocol: `def save(url: str, content: str) \u2192 None`; FileStorage and MemoryStorage implement it",
+          "fetch_all(urls: list[str], scraper, storage): uses asyncio.gather or TaskGroup for concurrency",
+          "Per-URL error handling \u2014 a failed URL logs the error but does not abort other fetches",
+          "Benchmark script: measure sync (requests) vs async time for the same 10 URLs",
+          "mypy --strict passes; all async functions have return type annotations"
+        ],
+        "acceptance": [
+          "Async version completes 10 fetches in roughly the time of the slowest single request",
+          "Sync version takes approximately N \u00d7 average_request_time",
+          "A URL that returns 404 or times out is caught and logged, not raised",
+          "`mypy --strict scraper.py` exits with zero errors"
+        ],
+        "hints": [
+          "Use `async with aiohttp.ClientSession() as session:` \u2014 one session for all requests",
+          "asyncio.gather(*[fetch(url) for url in urls], return_exceptions=True) catches per-task exceptions",
+          "Python 3.11+: prefer `asyncio.TaskGroup` over gather for better error handling",
+          "Run with: `asyncio.run(main())` at the bottom of the file"
+        ]
+      },
+      "after": {
+        "overview": "Build an async web scraper that fetches 10 URLs concurrently using asyncio and aiohttp. Define typed Protocol interfaces for the scraper and storage components. Benchmark the same controlled workload against a synchronous version; report latency, concurrency limits, errors, and environment rather than assuming a fixed speedup.",
+        "requirements": [
+          "ScraperProtocol: `async def fetch(url: str) \u2192 str`; AiohttpScraper implements it",
+          "StorageProtocol: `def save(url: str, content: str) \u2192 None`; FileStorage and MemoryStorage implement it",
+          "fetch_all(urls: list[str], scraper, storage): use a semaphore to cap concurrency, per-request timeouts, and gather or TaskGroup with an explicit failure policy",
+          "Per-URL error handling \u2014 a failed URL logs the error but does not abort other fetches",
+          "Benchmark script: measure sync (requests) vs async time for the same 10 URLs",
+          "mypy --strict passes; all async functions have return type annotations"
+        ],
+        "acceptance": [
+          "A controlled local HTTP fixture proves simultaneous in-flight requests never exceed the configured limit",
+          "Benchmark the same responses and connection settings in both modes; report timings and errors without a minimum speedup requirement",
+          "A URL that returns 404 or times out is caught and logged, not raised",
+          "`mypy --strict scraper.py` exits with zero errors"
+        ],
+        "hints": [
+          "Use `async with aiohttp.ClientSession() as session:` \u2014 one session for all requests",
+          "asyncio.gather(*[fetch(url) for url in urls], return_exceptions=True) catches per-task exceptions",
+          "TaskGroup is fail-fast: catch expected per-URL failures inside tasks if partial results are required, and propagate CancelledError so shutdown can clean up",
+          "Run with: `asyncio.run(main())` at the bottom of the file"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "python:2_10_2_0",
+      "id": 10,
+      "before": {
+        "acceptance": [
+          "All 100 images are correctly resized and saved in the output directory",
+          "ThreadPool is at least 5\u00d7 faster than sequential for downloads",
+          "ProcessPool is at least 2\u00d7 faster than sequential for resize",
+          "Timing table is printed at the end of the script"
+        ]
+      },
+      "after": {
+        "acceptance": [
+          "All 100 images are correctly resized and saved in the output directory",
+          "Record sequential and ThreadPool timings for identical downloads; explain overhead and variability without a fixed speedup requirement",
+          "ProcessPool is at least 2\u00d7 faster than sequential for resize",
+          "Timing table is printed at the end of the script"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "python:9_48_0_1",
+      "id": 52,
+      "before": {
+        "requirements": [
+          "docker-compose.yml: fastapi, postgresql (15), redis (7), zookeeper, kafka (Confluent Platform or Bitnami)",
+          "FastAPI: health endpoint GET /health \u2192 {status: 'ok', db: 'connected', redis: 'connected', kafka: 'connected'}",
+          "PostgreSQL: Alembic migrations for initial schema (users, tweets tables)",
+          "Kafka: create topics 'tweets' and 'notifications' on startup",
+          "All services connected on internal Docker network; only FastAPI port exposed"
+        ]
+      },
+      "after": {
+        "requirements": [
+          "docker-compose.yml: fastapi, postgresql, redis, kafka in KRaft mode; pin compatible image versions",
+          "FastAPI: health endpoint GET /health \u2192 {status: 'ok', db: 'connected', redis: 'connected', kafka: 'connected'}",
+          "PostgreSQL: Alembic migrations for initial schema (users, tweets tables)",
+          "Kafka: create topics 'tweets' and 'notifications' on startup",
+          "All services connected on internal Docker network; only FastAPI port exposed"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "java:1_1_2_0",
+      "id": 58,
+      "before": {
+        "hints": [
+          "Compact constructors are great for invariant checks \u2014 put validation there, not in static factories",
+          "Sealed types only work if all permitted types are in the same module / package \u2014 declare them next to the interface",
+          "Combine compact constructor checks with @NotNull annotations only when you also enable an actual nullness checker",
+          "Sealed types only work if every permitted subtype lives in the same module \u2014 declare them next to the interface",
+          "Compact constructors fire BEFORE field assignment \u2014 perfect for validation, useless for transformation"
+        ]
+      },
+      "after": {
+        "hints": [
+          "Compact constructors are great for invariant checks \u2014 put validation there, not in static factories",
+          "Sealed types only work if all permitted types are in the same module / package \u2014 declare them next to the interface",
+          "Combine compact constructor checks with @NotNull annotations only when you also enable an actual nullness checker",
+          "Sealed types only work if every permitted subtype lives in the same module \u2014 declare them next to the interface",
+          "Compact constructors can validate and normalize their parameters; implicit field assignment occurs after the body. Use defensive copies for mutable components."
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "java:1_6_2_0",
+      "id": 59,
+      "before": {
+        "hints": [
+          "LinkedHashMap with `accessOrder=true` is the trick for LRU \u2014 don't write your own list",
+          "ArrayDeque outperforms LinkedList for FIFO/LIFO every time \u2014 prefer it",
+          "For LinkedHashMap-based LRU, override removeEldestEntry \u2014 it's the only line you should write",
+          "LinkedHashMap(initialCapacity, loadFactor, accessOrder=true) is the entire LRU trick \u2014 don't write your own",
+          "PriorityQueue is min-heap by default \u2014 pass Comparator.reverseOrder() for top-K"
+        ]
+      },
+      "after": {
+        "hints": [
+          "LinkedHashMap with `accessOrder=true` is the trick for LRU \u2014 don't write your own list",
+          "ArrayDeque outperforms LinkedList for FIFO/LIFO every time \u2014 prefer it",
+          "For LinkedHashMap-based LRU, override removeEldestEntry \u2014 it's the only line you should write",
+          "LinkedHashMap(initialCapacity, loadFactor, accessOrder=true) is the entire LRU trick \u2014 don't write your own",
+          "For the K largest values, keep a min-heap of size K and evict its smallest member; use a max-heap when extracting largest-first from the full input."
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "java:2_10_2_0",
+      "id": 80,
+      "before": {
+        "hints": [
+          "Make each State class immutable; the transition returns the next State rather than mutating the current one",
+          "Sealed interfaces let the compiler verify every state is handled in a switch \u2014 make use of it",
+          "Don't model State as an enum + switch \u2014 that's the anti-pattern State pattern fixes"
+        ]
+      },
+      "after": {
+        "hints": [
+          "Make each State class immutable; the transition returns the next State rather than mutating the current one",
+          "Sealed interfaces let the compiler verify every state is handled in a switch \u2014 make use of it",
+          "Use an enum plus explicit transition table for a small state machine; consider State objects when state-specific behavior warrants the extra abstraction"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "java:3_14_2_0",
+      "id": 64,
+      "before": {
+        "requirements": [
+          "Resource: Product (id, name, price, stockCount). CRUD endpoints follow REST conventions",
+          "DTO + entity separation; MapStruct or manual mapping",
+          "@Valid + Bean Validation annotations on request DTOs (NotBlank, Positive, etc.)",
+          "@ControllerAdvice returns RFC 7807 Problem JSON for 400/404/500 \u2014 never a stack trace",
+          "OpenAPI 3 spec served at /v3/api-docs and Swagger UI at /swagger-ui.html",
+          "Pagination via Spring's Pageable + Page<T>; expose total-count via response header",
+          "All 4xx / 5xx responses use a single shared @ControllerAdvice \u2014 Problem JSON shape only"
+        ],
+        "hints": [
+          "Spring's default ResponseEntityExceptionHandler already does most of the RFC 7807 work \u2014 extend it, don't replace it",
+          "Use Spring Data's optimistic locking via @Version to detect concurrent updates",
+          "Spring already has a ResponseEntityExceptionHandler base class \u2014 extend it; never copy/paste its body",
+          "springdoc-openapi-starter-webmvc-ui auto-generates Swagger UI \u2014 no separate config",
+          "Spring's ResponseEntityExceptionHandler covers 80% of error cases out of the box \u2014 extend it",
+          "@Validated on the controller class, @Valid on the @RequestBody \u2014 both, not one"
+        ]
+      },
+      "after": {
+        "requirements": [
+          "Resource: Product (id, name, price, stockCount). CRUD endpoints follow REST conventions",
+          "DTO + entity separation; MapStruct or manual mapping",
+          "@Valid + Bean Validation annotations on request DTOs (NotBlank, Positive, etc.)",
+          "@ControllerAdvice returns RFC 9457 Problem JSON for 400/404/500 \u2014 never a stack trace",
+          "OpenAPI 3 spec served at /v3/api-docs and Swagger UI at /swagger-ui.html",
+          "Pagination via Spring's Pageable + Page<T>; expose total-count via response header",
+          "All 4xx / 5xx responses use a single shared @ControllerAdvice \u2014 Problem JSON shape only"
+        ],
+        "hints": [
+          "Spring's default ResponseEntityExceptionHandler already does most of the RFC 9457 work \u2014 extend it, don't replace it",
+          "Use Spring Data's optimistic locking via @Version to detect concurrent updates",
+          "Spring already has a ResponseEntityExceptionHandler base class \u2014 extend it; never copy/paste its body",
+          "springdoc-openapi-starter-webmvc-ui auto-generates Swagger UI \u2014 no separate config",
+          "Spring's ResponseEntityExceptionHandler covers 80% of error cases out of the box \u2014 extend it",
+          "Use @Valid on request DTOs; with Spring MVC 6.1 built-in method validation, remove class-level @Validated rather than forcing proxy-based validation"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "java:3_17_2_0",
+      "id": 89,
+      "before": {
+        "hints": [
+          "JaCoCo line coverage on getters is noise \u2014 exclude them from the gate",
+          "@DataJpaTest for repos, @WebMvcTest for controllers, @SpringBootTest for E2E \u2014 keep them separate",
+          "Testcontainers' reuse mode (testcontainers.reuse.enable=true) cuts test boot time by 5\u00d7"
+        ]
+      },
+      "after": {
+        "hints": [
+          "JaCoCo line coverage on getters is noise \u2014 exclude them from the gate",
+          "@DataJpaTest for repos, @WebMvcTest for controllers, @SpringBootTest for E2E \u2014 keep them separate",
+          "Testcontainers reuse is an optional local optimization; reset test data explicitly and use isolated containers in CI. Measure startup savings on your machine."
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "java:4_21_2_0",
+      "id": 91,
+      "before": {
+        "hints": [
+          "Use SET key value NX EX \u2014 the deprecated SETNX has no TTL atomic option",
+          "Redlock is overkill for single-master Redis; SET NX is enough most of the time",
+          "SET NX EX wins over SETNX + EXPIRE because it's atomic \u2014 never use the legacy variant",
+          "ZADD-based leaderboards scale to 1M entries; beyond that, shard by score range"
+        ]
+      },
+      "after": {
+        "hints": [
+          "Use SET key value NX EX \u2014 the deprecated SETNX has no TTL atomic option",
+          "Redlock is overkill for single-master Redis; SET NX is enough most of the time",
+          "Acquire a lease with SET key unique-token NX EX seconds so acquisition and expiry are atomic. Release it only with an atomic token comparison and delete; expiry alone does not prevent a paused owner from writing after its lease ends.",
+          "ZADD-based leaderboards scale to 1M entries; beyond that, shard by score range"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "java:4_23_2_0",
+      "id": 67,
+      "before": {
+        "hints": [
+          "Persist (consumer-group, order-id) somewhere durable to enforce idempotency \u2014 Redis SETNX or a DB unique index both work",
+          "Avoid synchronous calls between services \u2014 that's a microservices anti-pattern",
+          "Kafka transactions get you exactly-once at the cost of throughput \u2014 quantify before reaching for them",
+          "Idempotency keys belong in Postgres unique index; Redis is a cache, not source of truth",
+          "Producer + consumer acks=all + idempotent producer is the right config for at-least-once"
+        ]
+      },
+      "after": {
+        "hints": [
+          "Store an event-id deduplication record in the same DB transaction as the business update; a separate Redis SETNX cannot make the DB side effect atomic",
+          "Avoid synchronous calls between services \u2014 that's a microservices anti-pattern",
+          "Kafka transactions can atomically commit consumed offsets and output records within Kafka; consumers must use read_committed to hide aborted writes. Independent database writes still need atomic deduplication or coordination. Benchmark transactional overhead with your workload.",
+          "Idempotency keys belong in Postgres unique index; Redis is a cache, not source of truth",
+          "Producer + consumer acks=all + idempotent producer is the right config for at-least-once"
+        ]
+      }
+    },
+    {
+      "table": "build_specs",
+      "key": "java:7_39_2_0",
+      "id": 70,
+      "before": {
+        "requirements": [
+          "Stage 1: maven:3.9-eclipse-temurin-21 builds the JAR with -DskipTests",
+          "Stage 2: eclipse-temurin:21-jre-alpine copies only the runnable jar",
+          "`.dockerignore` excludes target/, .git, IDE folders",
+          "docker-compose: app, postgres, redis, kafka, zookeeper with healthchecks + depends_on conditions",
+          "App reads DB URL etc from environment, never hard-coded",
+          "Final runtime image runs as a non-root UID with explicit USER directive",
+          "BuildKit cache mounts speed up CI Maven builds by 3-5\u00d7"
+        ]
+      },
+      "after": {
+        "requirements": [
+          "Stage 1: maven:3.9-eclipse-temurin-21 builds the JAR with -DskipTests",
+          "Stage 2: eclipse-temurin:21-jre-alpine copies only the runnable jar",
+          "`.dockerignore` excludes target/, .git, IDE folders",
+          "docker-compose: app, postgres, redis, kafka (KRaft mode) with healthchecks + depends_on conditions",
+          "App reads DB URL etc from environment, never hard-coded",
+          "Final runtime image runs as a non-root UID with explicit USER directive",
+          "Measure cold and warm Maven builds with BuildKit cache mounts; savings depend on dependencies, network, and runner cache persistence"
+        ]
+      }
+    }
+  ],
+  "newChecks": [
+    {
+      "language": "python",
+      "phase": 2,
+      "week": 5,
+      "title": "Interfaces and runtime guarantees",
+      "mcq": [
+        {
+          "prompt": "A class implements the methods of a Protocol without inheriting from it. What can a static type checker do?",
+          "options": [
+            "Reject it because inheritance is mandatory",
+            "Accept it when the required signatures match",
+            "Guarantee all input values are valid at runtime"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Protocols support structural subtyping. Static compatibility does not validate arbitrary runtime inputs. See the typing.Protocol documentation."
+        },
+        {
+          "prompt": "A frozen dataclass contains a list. Which statement is correct?",
+          "options": [
+            "The list cannot change",
+            "Normal field reassignment is prevented, but the list can still mutate",
+            "The class is automatically safe for all concurrent use"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Frozen dataclasses prevent normal attribute assignment; they do not recursively freeze referenced objects. Use immutable components or defensive copies when required."
+        }
+      ]
+    },
+    {
+      "language": "python",
+      "phase": 2,
+      "week": 8,
+      "title": "Async cancellation and bounded concurrency",
+      "mcq": [
+        {
+          "prompt": "One TaskGroup child raises an unhandled non-cancellation exception. What happens to unfinished sibling tasks?",
+          "options": [
+            "They run indefinitely",
+            "They are cancelled and the group waits for cleanup",
+            "Their work is automatically retried"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "TaskGroup uses structured cancellation and reports failures after tasks finish cleanup. Catch expected per-URL failures inside tasks when partial results are the chosen policy."
+        },
+        {
+          "prompt": "An async scraper schedules 10,000 requests. What bounds pressure on the remote server?",
+          "options": [
+            "Using async def alone",
+            "A concurrency limit plus timeouts and rate-aware retry policy",
+            "Suppressing every exception"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Coroutines alone do not impose backpressure. Bound active requests, respect server limits, close sessions, and preserve cancellation."
+        }
+      ]
+    },
+    {
+      "language": "python",
+      "phase": 2,
+      "week": 10,
+      "title": "Choosing a concurrency model",
+      "mcq": [
+        {
+          "prompt": "An image resize benchmark is faster with threads on GIL-enabled CPython. Is that necessarily an invalid result?",
+          "options": [
+            "Yes, threads can never run CPU work in parallel",
+            "No, the native image library may release the GIL",
+            "Yes, processes always outperform threads"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Native extensions can release the GIL. Separate I/O and compute timing and record the runtime, extension behavior, process startup and serialization overhead."
+        },
+        {
+          "prompt": "Which benchmark comparison is meaningful?",
+          "options": [
+            "Different URLs and response sizes in each mode",
+            "Identical controlled inputs, reported runtime settings, repeated runs and error counts",
+            "Only the fastest run, excluding failed requests"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Control the workload and report variability and failures. There is no universal fixed speedup from switching concurrency models."
+        }
+      ]
+    },
+    {
+      "language": "python",
+      "phase": 5,
+      "week": 21,
+      "title": "Transactions and business invariants",
+      "mcq": [
+        {
+          "prompt": "Two transactions both read the last available seat and then book it. Which approach can enforce the invariant?",
+          "options": [
+            "A Python if statement before an unconstrained insert",
+            "A database constraint or atomic conditional update, with transaction handling",
+            "An index alone guarantees that no two users book it"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Enforce the invariant atomically in the database. An ordinary check-then-write can race; an index used only for performance does not prevent the conflicting write."
+        },
+        {
+          "prompt": "PostgreSQL rejects a serializable transaction with a serialization failure. What should a retry repeat?",
+          "options": [
+            "Only the final write using the old reads",
+            "The whole transaction, with a bounded retry policy",
+            "Nothing; suppress the error and report success"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Retry the entire transaction so reads and decisions are recomputed. External side effects require separate idempotency or coordination."
+        }
+      ]
+    },
+    {
+      "language": "python",
+      "phase": 6,
+      "week": 30,
+      "title": "Authentication versus authorization",
+      "mcq": [
+        {
+          "prompt": "A valid signed JWT identifies Alice. Is that sufficient to return any requested user document?",
+          "options": [
+            "Yes, the signature grants access to every resource",
+            "No, check ownership or permissions for the requested object",
+            "Yes, if the document ID is difficult to guess"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Authentication establishes identity. Object-level authorization decides whether that identity may access the specific resource."
+        },
+        {
+          "prompt": "Which JWT validations belong on the server? Select all that apply.",
+          "options": [
+            "Signature using an explicitly allowed algorithm",
+            "Expiry and applicable issuer/audience constraints",
+            "Trusting a token because its payload decodes as JSON"
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "Encoding is not authenticity. Validate the signature and the claims required by the application before accepting the identity."
+        }
+      ]
+    },
+    {
+      "language": "java",
+      "phase": 1,
+      "week": 4,
+      "title": "Virtual threads and downstream limits",
+      "mcq": [
+        {
+          "prompt": "Moving HTTP requests onto virtual threads overloads a downstream service. What is missing?",
+          "options": [
+            "A larger number of virtual threads",
+            "A downstream concurrency/rate limit and bounded deadlines",
+            "A guarantee that virtual threads make calls faster"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Virtual threads make waiting tasks cheaper; they do not increase downstream capacity. Bound concurrent requests and measure throughput and tail latency."
+        },
+        {
+          "prompt": "Which statement applies to the Java 21 baseline?",
+          "options": [
+            "Virtual threads and StructuredTaskScope are both final APIs",
+            "Virtual threads are final; StructuredTaskScope is a separate preview API",
+            "Virtual threads require preview flags"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "JEP 444 finalized virtual threads in Java 21. Structured concurrency was separately previewed in JEP 453; core exercises need not enable it."
+        }
+      ]
+    },
+    {
+      "language": "java",
+      "phase": 1,
+      "week": 6,
+      "title": "Collection invariants",
+      "mcq": [
+        {
+          "prompt": "To retain the K largest values from a long input using O(K) heap space, which heap should you maintain?",
+          "options": [
+            "A min-heap of at most K values",
+            "An unbounded min-heap containing all values",
+            "A max-heap of K values, always discarding its largest"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "The smallest retained value is the replacement threshold. Insert a candidate and remove the minimum when the heap exceeds K."
+        },
+        {
+          "prompt": "Why can get() need exclusive locking on an access-order LinkedHashMap?",
+          "options": [
+            "It modifies the access order",
+            "All Java reads always modify memory",
+            "A read lock automatically upgrades itself"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "A successful access can move an entry in the linked order. Treat it as a mutation when coordinating concurrent access to an LRU cache."
+        }
+      ]
+    },
+    {
+      "language": "java",
+      "phase": 4,
+      "week": 21,
+      "title": "Redis leases and ownership",
+      "mcq": [
+        {
+          "prompt": "Why is SET key token NX PX timeout preferable to SETNX followed by EXPIRE for acquiring a lease?",
+          "options": [
+            "It makes acquisition and expiry atomic",
+            "It prevents every failover anomaly",
+            "It prevents a client from ever pausing"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "A crash between SETNX and EXPIRE can leave an indefinite key. Atomic acquisition with expiry avoids that gap, but does not solve all distributed coordination problems."
+        },
+        {
+          "prompt": "A lease expires and another client acquires it. How should the original owner release its lease?",
+          "options": [
+            "Unconditionally DEL the key",
+            "Atomically delete only if the stored token still matches its ownership token",
+            "Delete all keys with the same prefix"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "An ownership check prevents deleting another owner\u2019s lease. A stale client may still act after expiry; correctness-sensitive writes may require fencing at the protected resource."
+        }
+      ]
+    },
+    {
+      "language": "java",
+      "phase": 4,
+      "week": 23,
+      "title": "Messaging guarantees and duplicate effects",
+      "mcq": [
+        {
+          "prompt": "A consumer updates PostgreSQL, then crashes before committing its Kafka offset. What can happen?",
+          "options": [
+            "Kafka automatically undoes the PostgreSQL transaction",
+            "The message is redelivered and the database effect may be repeated",
+            "The message can never be read again"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Offset commits and independent database transactions are not automatically atomic. Make processing idempotent, for example with a deduplication record in the same DB transaction as the effect."
+        },
+        {
+          "prompt": "Does an idempotent Kafka producer ensure exactly one email is sent by a consumer?",
+          "options": [
+            "Yes, for every external system",
+            "No, external effects need their own deduplication and failure handling",
+            "Only if the topic has one partition"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Kafka producer/transaction guarantees have a defined boundary. Email delivery outside that boundary is not automatically deduplicated."
+        }
+      ]
+    },
+    {
+      "language": "java",
+      "phase": 8,
+      "week": 47,
+      "title": "Safe retries and unknown outcomes",
+      "mcq": [
+        {
+          "prompt": "A payment provider times out after possibly charging the customer. What should the service do?",
+          "options": [
+            "Immediately charge through another provider",
+            "Record the unknown outcome and reconcile or retry using the provider\u2019s idempotency contract",
+            "Return a cached successful charge"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "A timeout does not prove failure. Blind fallback can double-charge; preserve the operation identity and reconcile the outcome before creating another charge."
+        },
+        {
+          "prompt": "Why add jitter and a retry budget to exponential backoff?",
+          "options": [
+            "They guarantee eventual success",
+            "They reduce synchronized retry bursts and limit amplification",
+            "They replace the need for deadlines"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Correlated retries can overload a recovering dependency. Jitter spreads retries and a budget bounds extra work; deadlines and idempotency remain necessary."
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "urlDrift": [
+    {
+      "key": "python:3_11_0_0",
+      "previous": "https://refactoring.guru/solid",
+      "current": "https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design",
+      "desired": "https://realpython.com/solid-principles-python/"
+    },
+    {
+      "key": "python:3_11_1_0",
+      "previous": "https://refactoring.guru/solid",
+      "current": "https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design",
+      "desired": "https://realpython.com/solid-principles-python/"
+    },
+    {
+      "key": "python:4_18_1_0",
+      "previous": "https://realpython.com/python-tdd-introduction/",
+      "current": "https://realpython.com/courses/test-driven-development-pytest/",
+      "desired": "https://docs.pytest.org/en/stable/explanation/goodpractices.html"
+    },
+    {
+      "key": "python:7_38_1_1",
+      "previous": "https://www.amazon.com/System-Design-Interview-Insiders-Volume/dp/1736049119/",
+      "current": "https://bytebytego.com/courses/system-design-interview/foreword",
+      "desired": "https://nlp.stanford.edu/IR-book/"
+    },
+    {
+      "key": "python:7_39_0_0",
+      "previous": "https://www.amazon.com/System-Design-Interview-Insiders-Volume/dp/1736049119/",
+      "current": "https://bytebytego.com/courses/system-design-interview/foreword",
+      "desired": "https://openconnect.netflix.com/en/"
+    },
+    {
+      "key": "java:3_13_1_1",
+      "previous": "https://baeldung.com/spring-boot-auto-configuration",
+      "current": "https://www.baeldung.com/spring-boot-custom-auto-configuration",
+      "desired": "https://docs.spring.io/spring-boot/3.5/reference/features/external-config.html"
+    },
+    {
+      "key": "java:3_16_1_1",
+      "previous": "https://baeldung.com/spring-security-preauthorize",
+      "current": "https://www.baeldung.com/spring-security-method-security",
+      "desired": "https://docs.spring.io/spring-security/reference/6.5/servlet/authorization/method-security.html"
+    },
+    {
+      "key": "java:3_17_1_0",
+      "previous": "https://java.testcontainers.org/frameworks/spring_boot/",
+      "current": "https://docs.spring.io/spring-boot/reference/testing/testcontainers.html",
+      "desired": "https://docs.spring.io/spring-boot/3.5/reference/testing/testcontainers.html"
+    },
+    {
+      "key": "java:4_20_1_0",
+      "previous": "https://baeldung.com/hibernate-batchsize",
+      "current": "https://www.baeldung.com/jpa-hibernate-batch-insert-update",
+      "desired": "https://docs.jboss.org/hibernate/orm/6.6/javadocs/org/hibernate/annotations/BatchSize.html"
+    },
+    {
+      "key": "java:4_20_1_1",
+      "previous": "https://baeldung.com/spring-data-jpa-bulk-insert",
+      "current": "https://www.baeldung.com/spring-data-jpa-batch-inserts",
+      "desired": "https://docs.jboss.org/hibernate/orm/6.6/userguide/html_single/Hibernate_User_Guide.html#batch"
+    },
+    {
+      "key": "java:6_35_1_1",
+      "previous": "https://www.amazon.com/System-Design-Interview-Insiders-Volume/dp/1736049119/",
+      "current": "https://bytebytego.com/courses/system-design-interview/foreword",
+      "desired": "https://nlp.stanford.edu/IR-book/"
+    },
+    {
+      "key": "java:6_36_0_0",
+      "previous": "https://www.amazon.com/System-Design-Interview-Insiders-Volume/dp/1736049119/",
+      "current": "https://bytebytego.com/courses/system-design-interview/foreword",
+      "desired": "https://openconnect.netflix.com/en/"
+    },
+    {
+      "key": "java:7_39_1_1",
+      "previous": "https://baeldung.com/spring-boot-docker-compose",
+      "current": "https://www.baeldung.com/docker-compose-support-spring-boot",
+      "desired": "https://docs.spring.io/spring-boot/3.5/reference/features/dev-services.html#features.dev-services.docker-compose"
+    },
+    {
+      "key": "java:7_40_1_1",
+      "previous": "https://baeldung.com/spring-boot-kubernetes",
+      "current": "https://www.baeldung.com/spring-boot-minikube",
+      "desired": "https://kubernetes.io/docs/tutorials/hello-minikube/"
+    },
+    {
+      "key": "java:7_43_1_1",
+      "previous": "https://baeldung.com/spring-cloud-aws",
+      "current": "https://www.baeldung.com/spring-cloud-aws-s3",
+      "desired": "https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/examples-s3.html"
+    }
+  ]
+}
